@@ -45,7 +45,6 @@ See `docs/EVALUATION.md` for 400-row, 5,000-row, and full-dataset comparisons.
 - `tests`: smoke and workflow tests.
 - `docs`: specification, architecture, and demo script.
 
-```
 
 ## API
 
