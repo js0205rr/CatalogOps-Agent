@@ -1,14 +1,16 @@
 # CatalogOps-Agent
 
-CatalogOps-Agent is a rule-first, evidence-backed product catalog governance system for pre-publication ecommerce review. It combines LangGraph multi-agent orchestration, category prediction, required-attribute validation, Hybrid RAG policy retrieval, evidence verification, batch CSV governance reports, and FastAPI/React operator workflows.
+[中文](README.zh-CN.md) | English
 
-The MVP focuses on text and CSV catalog data. It does not audit images, does not execute model-generated code, and keeps mock mode available for deterministic local and notebook experiments. LLM usage is reserved for low-confidence cases or complex explanations; the default review path uses taxonomy rules, MiniLM/LinearSVM category assets, attribute rules, policy retrieval, and evidence checks before any model call.
+CatalogOps-Agent is a rule-first, evidence-backed product catalog governance system for pre-publication ecommerce review. It combines LangGraph multi-agent orchestration, category prediction, required attribute checks, title validation, and policy retrieval to produce explainable review decisions.
+
+The MVP focuses on text and CSV catalog data. It does not audit images, does not execute model-generated code, and keeps mock mode available for deterministic local and notebook experiments. LLM usage is optional and controlled by configuration.
 
 Every publish decision is tied to evidence. Issues without sufficient evidence are downgraded to uncertain or human-review paths instead of being treated as final automated conclusions.
 
 ## Current Baseline
 
-Formal evaluation now runs on the four Ecommerce Text Classification top-level domains: `Books`, `Clothing & Accessories`, `Electronics`, and `Household`. The full benchmark uses `dataset/processed/ecommerce_catalogops_mismatch_20pct.csv` with 27,548 rows and a controlled category-mismatch injection rate of about 20%.
+Formal evaluation now runs on the four Ecommerce Text Classification top-level domains: `Books`, `Clothing & Accessories`, `Electronics`, and `Household`. The full benchmark uses `dataset/processed/ecommerce_text_classification`.
 
 Latest full-run mock-mode baseline:
 
@@ -45,7 +47,6 @@ See `docs/EVALUATION.md` for 400-row, 5,000-row, and full-dataset comparisons.
 - `tests`: smoke and workflow tests.
 - `docs`: specification, architecture, and demo script.
 
-
 ## API
 
 - `GET /health`
@@ -64,27 +65,24 @@ See `docs/EVALUATION.md` for 400-row, 5,000-row, and full-dataset comparisons.
 
 Mock mode is enabled by default through `CATALOGOPS_MOCK_LLM=true`, so the basic product review, batch review, policy retrieval, and smoke tests do not require API keys, Milvus, or PostgreSQL.
 
-Policy document ingestion:
+### Policy document ingestion
 
 ```bash
 python scripts/ingest_policy_docs.py
 ```
 
 `USE_MOCK=true` writes a deterministic local policy index without Milvus or embedding services.
-Set `USE_MOCK=false`, `MILVUS_URI`, and `POLICY_EMBEDDING_PROVIDER=minilm` to ingest
-policy chunks into Milvus with the local MiniLM model.
+Set `USE_MOCK=false`, `MILVUS_URI`, and `POLICY_EMBEDDING_PROVIDER=minilm` to ingest policy chunks into Milvus with the local MiniLM model.
 
-Policy retrieval evaluation:
+### Policy retrieval evaluation
 
 ```bash
 python scripts/evaluate_policy_rag_retrieval.py
 ```
 
-Without `MILVUS_URI`, the script evaluates local retrieval/reranker variants and skips
-Milvus variants. With `MILVUS_URI` set, it ingests policy docs and compares Milvus
-dense retrieval with `none`, `lexical`, and `semantic` reranker modes.
+Without `MILVUS_URI`, the script evaluates local retrieval/reranker variants and skips Milvus variants. With `MILVUS_URI` set, it ingests policy docs and compares Milvus dense retrieval with `none`, `lexical`, and `semantic` reranker modes.
 
-Catalog governance formal evaluation:
+### Catalog governance formal evaluation
 
 ```bash
 python scripts/evaluate_catalogops_formal.py --sample-size 5000 --output-dir dataset/processed/evaluation_5000 --skip-raw-batch-report
