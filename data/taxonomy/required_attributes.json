@@ -1,0 +1,267 @@
+{
+  "服饰鞋包/女装/T恤": [
+    "品牌",
+    "材质",
+    "尺码",
+    "颜色"
+  ],
+  "服饰鞋包/女装/连衣裙": [
+    "品牌",
+    "材质",
+    "尺码",
+    "颜色"
+  ],
+  "数码家电/手机通讯/智能手机": [
+    "品牌",
+    "型号",
+    "存储容量",
+    "网络制式"
+  ],
+  "数码配件/手机配件/手机壳": [
+    "品牌",
+    "适用型号",
+    "材质",
+    "颜色"
+  ],
+  "数码配件/手机配件/手机保护壳": [
+    "品牌",
+    "适用型号",
+    "材质",
+    "颜色"
+  ],
+  "数码配件/音频设备/蓝牙耳机": [
+    "品牌",
+    "型号",
+    "连接方式",
+    "续航时间"
+  ],
+  "数码配件/耳机/蓝牙耳机": [
+    "品牌",
+    "型号",
+    "连接方式",
+    "续航时间"
+  ],
+  "家用电器/厨房电器/空气炸锅": [
+    "品牌",
+    "容量",
+    "功率",
+    "型号"
+  ],
+  "家居日用/清洁用品/拖把": [
+    "品牌",
+    "材质",
+    "适用场景"
+  ],
+  "食品饮料/休闲食品/坚果": [
+    "品牌",
+    "净含量",
+    "保质期",
+    "生产日期"
+  ],
+  "Clothing & Accessories > Apparel": [
+    "brand",
+    "product_type",
+    "gender",
+    "size",
+    "color",
+    "material"
+  ],
+  "Clothing & Accessories > Tops": [
+    "brand",
+    "product_type",
+    "gender",
+    "size",
+    "color",
+    "material"
+  ],
+  "Clothing & Accessories > Bottoms": [
+    "brand",
+    "product_type",
+    "gender",
+    "size",
+    "color",
+    "material"
+  ],
+  "Clothing & Accessories > Dresses": [
+    "brand",
+    "product_type",
+    "gender",
+    "size",
+    "color",
+    "material"
+  ],
+  "Clothing & Accessories > Clothing Sets": [
+    "brand",
+    "product_type",
+    "gender",
+    "size",
+    "color",
+    "material",
+    "pieces_in_set"
+  ],
+  "Clothing & Accessories > Innerwear": [
+    "brand",
+    "product_type",
+    "gender",
+    "size",
+    "color",
+    "material"
+  ],
+  "Clothing & Accessories > Shoes": [
+    "brand",
+    "product_type",
+    "gender",
+    "size",
+    "color",
+    "material"
+  ],
+  "Clothing & Accessories > Bags": [
+    "brand",
+    "product_type",
+    "color",
+    "material"
+  ],
+  "Clothing & Accessories > Accessories": [
+    "brand",
+    "product_type",
+    "color",
+    "material"
+  ],
+  "Electronics": [
+    "brand",
+    "product_type",
+    "model",
+    "key_specification"
+  ],
+  "Electronics > Mobile Phones": [
+    "brand",
+    "product_type",
+    "model",
+    "storage_capacity",
+    "network_type"
+  ],
+  "Electronics > Audio": [
+    "brand",
+    "product_type",
+    "model",
+    "connectivity"
+  ],
+  "Electronics > Computers & Accessories": [
+    "brand",
+    "product_type",
+    "model",
+    "processor_or_capacity"
+  ],
+  "Electronics > Cameras": [
+    "brand",
+    "product_type",
+    "model",
+    "resolution_or_mount"
+  ],
+  "Electronics > Storage & Memory": [
+    "brand",
+    "product_type",
+    "storage_capacity",
+    "interface"
+  ],
+  "Electronics > Chargers & Cables": [
+    "brand",
+    "product_type",
+    "connector_type",
+    "power_rating"
+  ],
+  "Household": [
+    "brand",
+    "product_type",
+    "material",
+    "use_case"
+  ],
+  "Household > Home Decor": [
+    "brand",
+    "product_type",
+    "material",
+    "dimensions",
+    "color"
+  ],
+  "Household > Kitchen & Dining": [
+    "brand",
+    "product_type",
+    "material",
+    "capacity_or_size"
+  ],
+  "Household > Furniture": [
+    "brand",
+    "product_type",
+    "material",
+    "dimensions",
+    "assembly_required"
+  ],
+  "Household > Bedding & Bath": [
+    "brand",
+    "product_type",
+    "material",
+    "size",
+    "color"
+  ],
+  "Household > Storage & Organization": [
+    "brand",
+    "product_type",
+    "material",
+    "dimensions"
+  ],
+  "Household > Cleaning Supplies": [
+    "brand",
+    "product_type",
+    "material",
+    "use_case"
+  ],
+  "Household > Lighting": [
+    "brand",
+    "product_type",
+    "power_rating",
+    "color_or_finish"
+  ],
+  "Books": [
+    "book_title",
+    "author",
+    "format",
+    "language"
+  ],
+  "Books > Fiction": [
+    "book_title",
+    "author",
+    "format",
+    "language"
+  ],
+  "Books > Non-Fiction": [
+    "book_title",
+    "author",
+    "format",
+    "language"
+  ],
+  "Books > Academic & Exam Prep": [
+    "book_title",
+    "author_or_editor",
+    "format",
+    "edition",
+    "exam_or_subject"
+  ],
+  "Books > Children Books": [
+    "book_title",
+    "author_or_editor",
+    "format",
+    "age_range"
+  ],
+  "Books > Reference": [
+    "book_title",
+    "author_or_editor",
+    "format",
+    "language"
+  ],
+  "Books > Religion & Spirituality": [
+    "book_title",
+    "author_or_editor",
+    "format",
+    "language"
+  ]
+}

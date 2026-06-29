@@ -1,0 +1,203 @@
+{
+  "input_csv": "dataset/processed/ecommerce_catalogops_mismatch_20pct.csv",
+  "sample_csv": "/notebook/workspace/CatalogOps-Agent/dataset/processed/batch_runs/ecommerce_policy_smoke_400.csv",
+  "sample_size": 400,
+  "elapsed_seconds": 8.493,
+  "ingestion": {
+    "documents": 29,
+    "chunks": 105,
+    "mode": "mock",
+    "index_path": "/notebook/workspace/CatalogOps-Agent/data/policy_index.json"
+  },
+  "profile": {
+    "row_count": 400,
+    "rows": 400,
+    "columns": [
+      "product_id",
+      "title",
+      "description",
+      "seller_category",
+      "attributes",
+      "seller_id",
+      "price"
+    ],
+    "detected_columns": {
+      "product_id": "product_id",
+      "title": "title",
+      "description": "description",
+      "seller_category": "seller_category",
+      "attributes": "attributes",
+      "seller_id": "seller_id",
+      "price": "price"
+    },
+    "sample_skus": [
+      "ECOM-016191",
+      "ECOM-016192",
+      "ECOM-016194",
+      "ECOM-016195",
+      "ECOM-016196"
+    ],
+    "missing_rates": {
+      "product_id": 0.0,
+      "title": 0.0,
+      "description": 0.0,
+      "seller_category": 0.0,
+      "attributes": 0.0,
+      "seller_id": 0.0,
+      "price": 1.0
+    },
+    "duplicate_count": 0,
+    "seller_count": 100,
+    "category_distribution": {
+      "Books": 100,
+      "Clothing & Accessories": 100,
+      "Electronics": 100,
+      "Household": 100
+    }
+  },
+  "selected_policy_rows": 274,
+  "metrics": {
+    "category_mismatch_rate": 0.5825,
+    "attribute_missing_rate": 0.355,
+    "title_issue_rate": 0.23,
+    "decision_distribution": {
+      "pass": 126,
+      "human_review": 38,
+      "reject": 236
+    },
+    "top_issue_categories": {
+      "Household": 100,
+      "Electronics": 93,
+      "Books": 75,
+      "Clothing & Accessories": 6
+    },
+    "top_issue_sellers": {
+      "seller_067": 6,
+      "seller_027": 6,
+      "seller_007": 5,
+      "seller_029": 5,
+      "seller_053": 5,
+      "seller_066": 5,
+      "seller_080": 5,
+      "seller_085": 5,
+      "seller_013": 5,
+      "seller_062": 5
+    }
+  },
+  "issue_summary": [
+    {
+      "issue_type": "category_mismatch",
+      "count": 233,
+      "severity": "blocker"
+    },
+    {
+      "issue_type": "low_confidence",
+      "count": 38,
+      "severity": "warning"
+    },
+    {
+      "issue_type": "missing_attribute",
+      "count": 462,
+      "severity": "blocker"
+    },
+    {
+      "issue_type": "title_violation",
+      "count": 109,
+      "severity": "blocker"
+    }
+  ],
+  "policy_hit_stats": {
+    "empty_policy_contexts": 0,
+    "top_policy_docs": {
+      "clothing_attribute_schema": 525,
+      "clothing_keyword_stuffing_policy": 353,
+      "clothing_category_policy": 297,
+      "clothing_mismatch_cases": 228,
+      "clothing_title_policy": 138,
+      "prohibited_claims_policy": 100,
+      "books_attribute_schema": 96,
+      "category_policy": 76,
+      "books_category_policy": 76,
+      "household_attribute_schema": 69,
+      "books_prohibited_claims_policy": 60,
+      "books_title_policy": 54,
+      "household_category_policy": 46,
+      "bluetooth_headset_schema": 43,
+      "category_mismatch_cases": 38,
+      "attribute_schema": 38,
+      "phone_case_schema": 38,
+      "household_title_policy": 36,
+      "household_prohibited_claims_policy": 32,
+      "air_fryer_title_policy": 30
+    },
+    "hit_categories": {
+      "Clothing & Accessories": 1541,
+      "Books": 306,
+      "all": 256,
+      "Household": 206,
+      "Electronics": 46,
+      "数码配件/音频设备/蓝牙耳机": 43,
+      "数码配件/手机配件/手机壳": 38,
+      "家用电器/厨房电器/空气炸锅": 30
+    },
+    "hit_doc_types": {
+      "category_policy": 822,
+      "attribute_schema": 822,
+      "title_policy": 822
+    }
+  },
+  "review_evidence_stats": {
+    "review_count": 274,
+    "total_evidence_items": 3562,
+    "avg_evidence_per_review": 13.0,
+    "avg_evidence_coverage_score": 100.0,
+    "covered_issues": 827,
+    "downgraded_issues": 0,
+    "removed_issues": 0,
+    "decision_distribution": {
+      "human_review": 38,
+      "reject": 236
+    },
+    "issues": {
+      "low_confidence": 38,
+      "missing_attribute": 462,
+      "category_mismatch": 233,
+      "title_violation": 94
+    },
+    "issues_without_evidence": {}
+  },
+  "trace": [
+    {
+      "node": "profile_catalog_csv",
+      "detail": "Loaded 400 rows"
+    },
+    {
+      "node": "plan_batch_strategy",
+      "detail": "full_rule_scan"
+    },
+    {
+      "node": "run_batch_precheck",
+      "detail": "Found 15 precheck issues"
+    },
+    {
+      "node": "run_batch_category_prediction",
+      "detail": "Rule-predicted 400 rows; LLM calls: 0"
+    },
+    {
+      "node": "selective_policy_retrieval",
+      "detail": "Retrieved policy for 274 risk rows"
+    },
+    {
+      "node": "aggregate_batch_issues",
+      "detail": "Aggregated 842 issues"
+    },
+    {
+      "node": "generate_batch_report",
+      "detail": "Generated markdown batch report"
+    }
+  ],
+  "outputs": {
+    "summary_json": "/notebook/workspace/CatalogOps-Agent/dataset/processed/batch_runs/ecommerce_policy_smoke_400_summary.json",
+    "report_markdown": "/notebook/workspace/CatalogOps-Agent/dataset/processed/batch_runs/ecommerce_policy_smoke_400_report.md"
+  }
+}

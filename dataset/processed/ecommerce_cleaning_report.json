@@ -1,0 +1,48 @@
+{
+  "inputs": {
+    "ecommerce_csv": "/notebook/workspace/CatalogOps-Agent/dataset/ecommerceDataset.csv",
+    "clothing_csv": "/notebook/workspace/CatalogOps-Agent/dataset/processed/clothing_catalogops_clean.csv"
+  },
+  "outputs": {
+    "catalogops_clean_csv": "/notebook/workspace/CatalogOps-Agent/dataset/processed/ecommerce_catalogops_clean.csv",
+    "catalogops_mismatch_csv": "/notebook/workspace/CatalogOps-Agent/dataset/processed/ecommerce_catalogops_mismatch_20pct.csv",
+    "mismatch_sample_csv": "/notebook/workspace/CatalogOps-Agent/dataset/processed/ecommerce_catalogops_mismatch_sample_2000.csv",
+    "labels_csv": "/notebook/workspace/CatalogOps-Agent/dataset/processed/ecommerce_labels.csv",
+    "taxonomy_json": "/notebook/workspace/CatalogOps-Agent/dataset/processed/ecommerce_taxonomy.json"
+  },
+  "raw_rows": 47297,
+  "clean_rows": 27548,
+  "dropped_empty": 0,
+  "dropped_short": 304,
+  "dropped_duplicate": 19445,
+  "ecommerce_reader": {
+    "skipped_malformed_rows": 4
+  },
+  "synthetic_mismatch_rows": 5663,
+  "synthetic_mismatch_rate": 0.2056,
+  "gold_category_distribution": {
+    "Clothing & Accessories": 5628,
+    "Household": 10562,
+    "Books": 6054,
+    "Electronics": 5304
+  },
+  "split_distribution": {
+    "Clothing & Accessories::train": 4503,
+    "Clothing & Accessories::test": 1125,
+    "Household::train": 8450,
+    "Household::test": 2112,
+    "Books::train": 4844,
+    "Books::test": 1210,
+    "Electronics::train": 4244,
+    "Electronics::test": 1060
+  },
+  "columns": [
+    "product_id",
+    "title",
+    "description",
+    "seller_category",
+    "attributes",
+    "seller_id",
+    "price"
+  ]
+}

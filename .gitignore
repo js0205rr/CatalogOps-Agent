@@ -1,0 +1,40 @@
+.env
+.env.local
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Node / frontend
+apps/web/node_modules/
+apps/web/dist/
+node_modules/
+
+# Local workspaces and old repository backups
+work/
+.cursor/
+dataset/.cursor/
+.git_houseinsight_backup_*/
+
+# Generated policy indexes
+data/policy_index.json
+
+# Large raw datasets and generated CSV artifacts
+dataset/*.csv
+dataset/*.xlsx
+dataset/processed/*.csv
+dataset/processed/batch_runs/*.csv
+dataset/processed/evaluation*/**/*predictions.csv
+dataset/processed/evaluation*/**/*batch_report.json
+dataset/processed/evaluation*/**/*sample*.csv
+dataset/processed/evaluation_exports/
+
+# Local embedding model weights; keep small supervised joblib artifacts in models/
+models/all-MiniLM-L6-v2/

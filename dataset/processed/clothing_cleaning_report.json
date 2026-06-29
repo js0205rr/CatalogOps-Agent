@@ -1,0 +1,57 @@
+{
+  "input_path": "C:\\Users\\ruan\\ASoftWare\\CatalogOps-Agent\\dataset\\Clothing.xlsx",
+  "outputs": {
+    "catalogops_clean_csv": "C:\\Users\\ruan\\ASoftWare\\CatalogOps-Agent\\dataset\\processed\\clothing_catalogops_clean.csv",
+    "catalogops_mismatch_csv": "C:\\Users\\ruan\\ASoftWare\\CatalogOps-Agent\\dataset\\processed\\clothing_catalogops_mismatch_20pct.csv",
+    "mismatch_sample_csv": "C:\\Users\\ruan\\ASoftWare\\CatalogOps-Agent\\dataset\\processed\\clothing_catalogops_mismatch_sample_1000.csv",
+    "labels_csv": "C:\\Users\\ruan\\ASoftWare\\CatalogOps-Agent\\dataset\\processed\\clothing_labels.csv"
+  },
+  "workbook": {
+    "sheets": [
+      "Sheet1",
+      "Sheet2",
+      "Sheet3"
+    ],
+    "sheet_shapes": {
+      "Sheet1": [
+        8661,
+        19
+      ],
+      "Sheet2": [
+        0,
+        0
+      ],
+      "Sheet3": [
+        0,
+        0
+      ]
+    }
+  },
+  "raw_rows": 8661,
+  "clean_rows": 5628,
+  "dropped_empty": 1,
+  "dropped_short": 20,
+  "dropped_duplicate": 3012,
+  "synthetic_mismatch_rows": 1125,
+  "synthetic_mismatch_rate": 0.1999,
+  "gold_category_distribution": {
+    "Clothing & Accessories > Clothing Sets": 521,
+    "Clothing & Accessories > Accessories": 902,
+    "Clothing & Accessories > Dresses": 692,
+    "Clothing & Accessories > Tops": 1343,
+    "Clothing & Accessories > Bottoms": 703,
+    "Clothing & Accessories > Shoes": 238,
+    "Clothing & Accessories > Apparel": 495,
+    "Clothing & Accessories > Innerwear": 681,
+    "Clothing & Accessories > Bags": 53
+  },
+  "columns": [
+    "product_id",
+    "title",
+    "description",
+    "seller_category",
+    "attributes",
+    "seller_id",
+    "price"
+  ]
+}

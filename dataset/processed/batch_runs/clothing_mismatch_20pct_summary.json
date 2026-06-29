@@ -1,0 +1,101 @@
+{
+  "csv_path": "dataset/processed/clothing_catalogops_mismatch_20pct.csv",
+  "elapsed_seconds": 68.407,
+  "row_count": 5628,
+  "duplicate_count": 0,
+  "seller_count": 50,
+  "selected_policy_rows": 2637,
+  "review_count": 2637,
+  "metrics": {
+    "category_mismatch_rate": 0.4579,
+    "attribute_missing_rate": 0.0553,
+    "title_issue_rate": 0.3392,
+    "decision_distribution": {
+      "pass": 2991,
+      "reject": 2637
+    },
+    "top_issue_categories": {
+      "Clothing & Accessories > Accessories": 622,
+      "Clothing & Accessories > Bottoms": 521,
+      "Clothing & Accessories > Tops": 440,
+      "Clothing & Accessories > Bags": 283,
+      "Clothing & Accessories > Innerwear": 271,
+      "Clothing & Accessories > Dresses": 214,
+      "Clothing & Accessories > Shoes": 147,
+      "Clothing & Accessories > Apparel": 77,
+      "Clothing & Accessories > Clothing Sets": 62
+    },
+    "top_issue_sellers": {
+      "seller_005": 106,
+      "seller_025": 106,
+      "seller_040": 106,
+      "seller_045": 103,
+      "seller_020": 102,
+      "seller_000": 102,
+      "seller_035": 101,
+      "seller_010": 100,
+      "seller_030": 100,
+      "seller_015": 99
+    }
+  },
+  "issue_summary": [
+    {
+      "issue_type": "category_mismatch",
+      "count": 2577,
+      "severity": "blocker"
+    },
+    {
+      "issue_type": "missing_attribute",
+      "count": 353,
+      "severity": "blocker"
+    },
+    {
+      "issue_type": "title_violation",
+      "count": 2086,
+      "severity": "blocker"
+    }
+  ],
+  "category_mismatch_eval": {
+    "confusion": {
+      "tn": 2950,
+      "tp": 1024,
+      "fp": 1553,
+      "fn": 101
+    },
+    "actual_synthetic_mismatch_rate": 0.1999,
+    "predicted_mismatch_rate": 0.4579,
+    "precision": 0.3974,
+    "recall": 0.9102,
+    "f1": 0.5532
+  },
+  "trace": [
+    {
+      "node": "profile_catalog_csv",
+      "detail": "Loaded 5628 rows"
+    },
+    {
+      "node": "plan_batch_strategy",
+      "detail": "chunked_rule_scan"
+    },
+    {
+      "node": "run_batch_precheck",
+      "detail": "Found 110 precheck issues"
+    },
+    {
+      "node": "run_batch_category_prediction",
+      "detail": "Rule-predicted 5628 rows; LLM calls: 0"
+    },
+    {
+      "node": "selective_policy_retrieval",
+      "detail": "Retrieved policy for 2637 risk rows"
+    },
+    {
+      "node": "aggregate_batch_issues",
+      "detail": "Aggregated 5016 issues"
+    },
+    {
+      "node": "generate_batch_report",
+      "detail": "Generated markdown batch report"
+    }
+  ]
+}

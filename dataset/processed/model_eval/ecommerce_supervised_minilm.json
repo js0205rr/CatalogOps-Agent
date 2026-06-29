@@ -1,0 +1,500 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-28T11:18:41.066326+00:00",
+  "elapsed_seconds": 943.155,
+  "inputs": {
+    "clean_csv": "/notebook/workspace/CatalogOps-Agent/dataset/processed/ecommerce_catalogops_clean.csv",
+    "mismatch_csv": "/notebook/workspace/CatalogOps-Agent/dataset/processed/ecommerce_catalogops_mismatch_20pct.csv",
+    "labels_csv": "/notebook/workspace/CatalogOps-Agent/dataset/processed/ecommerce_labels.csv",
+    "taxonomy_json": "/notebook/workspace/CatalogOps-Agent/dataset/processed/ecommerce_taxonomy.json",
+    "model_path": "/notebook/workspace/CatalogOps-Agent/models/all-MiniLM-L6-v2"
+  },
+  "split": {
+    "train_rows": 22041,
+    "test_rows": 5507,
+    "mismatch_scope": "test"
+  },
+  "embedding": {
+    "model": "all-MiniLM-L6-v2",
+    "backend": "sentence_transformers",
+    "batch_size": 128,
+    "max_description_chars": 1200,
+    "normalized": true
+  },
+  "category_test": {
+    "row_count": 5507,
+    "methods": {
+      "rule": {
+        "category_accuracy": 0.8738,
+        "macro_f1": 0.8713,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories",
+            "Electronics",
+            "Household",
+            "Books"
+          ],
+          "matrix": [
+            [
+              1112,
+              7,
+              6,
+              0
+            ],
+            [
+              15,
+              723,
+              297,
+              25
+            ],
+            [
+              166,
+              76,
+              1823,
+              47
+            ],
+            [
+              16,
+              14,
+              26,
+              1154
+            ]
+          ]
+        }
+      },
+      "minilm_cosine": {
+        "category_accuracy": 0.8013,
+        "macro_f1": 0.8054,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories",
+            "Electronics",
+            "Household",
+            "Books"
+          ],
+          "matrix": [
+            [
+              1113,
+              6,
+              5,
+              1
+            ],
+            [
+              172,
+              810,
+              44,
+              34
+            ],
+            [
+              451,
+              136,
+              1415,
+              110
+            ],
+            [
+              65,
+              30,
+              40,
+              1075
+            ]
+          ]
+        }
+      },
+      "hybrid_margin_0_015": {
+        "category_accuracy": 0.8295,
+        "macro_f1": 0.8316,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories",
+            "Electronics",
+            "Household",
+            "Books"
+          ],
+          "matrix": [
+            [
+              1114,
+              6,
+              5,
+              0
+            ],
+            [
+              146,
+              809,
+              80,
+              25
+            ],
+            [
+              377,
+              115,
+              1544,
+              76
+            ],
+            [
+              52,
+              24,
+              33,
+              1101
+            ]
+          ]
+        }
+      },
+      "minilm_logreg": {
+        "category_accuracy": 0.9559,
+        "macro_f1": 0.9562,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories",
+            "Electronics",
+            "Household",
+            "Books"
+          ],
+          "matrix": [
+            [
+              1103,
+              6,
+              14,
+              2
+            ],
+            [
+              4,
+              1008,
+              40,
+              8
+            ],
+            [
+              32,
+              59,
+              1999,
+              22
+            ],
+            [
+              9,
+              15,
+              32,
+              1154
+            ]
+          ]
+        }
+      },
+      "minilm_linearsvm": {
+        "category_accuracy": 0.9595,
+        "macro_f1": 0.9596,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories",
+            "Electronics",
+            "Household",
+            "Books"
+          ],
+          "matrix": [
+            [
+              1104,
+              6,
+              14,
+              1
+            ],
+            [
+              5,
+              1001,
+              45,
+              9
+            ],
+            [
+              23,
+              52,
+              2017,
+              20
+            ],
+            [
+              8,
+              14,
+              26,
+              1162
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "mismatch_detection": {
+    "scope": "test",
+    "row_count": 5507,
+    "methods": {
+      "rule": {
+        "category_accuracy": 0.8738,
+        "macro_f1": 0.8713,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories",
+            "Electronics",
+            "Household",
+            "Books"
+          ],
+          "matrix": [
+            [
+              1112,
+              7,
+              6,
+              0
+            ],
+            [
+              15,
+              723,
+              297,
+              25
+            ],
+            [
+              166,
+              76,
+              1823,
+              47
+            ],
+            [
+              16,
+              14,
+              26,
+              1154
+            ]
+          ]
+        },
+        "mismatch_detection": {
+          "confusion": {
+            "tp": 1125,
+            "fp": 558,
+            "fn": 40,
+            "tn": 3784
+          },
+          "actual_mismatch_rate": 0.2115,
+          "predicted_mismatch_rate": 0.3056,
+          "precision": 0.6684,
+          "recall": 0.9657,
+          "f1": 0.79
+        }
+      },
+      "minilm_cosine": {
+        "category_accuracy": 0.8013,
+        "macro_f1": 0.8054,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories",
+            "Electronics",
+            "Household",
+            "Books"
+          ],
+          "matrix": [
+            [
+              1113,
+              6,
+              5,
+              1
+            ],
+            [
+              172,
+              810,
+              44,
+              34
+            ],
+            [
+              451,
+              136,
+              1415,
+              110
+            ],
+            [
+              65,
+              30,
+              40,
+              1075
+            ]
+          ]
+        },
+        "mismatch_detection": {
+          "confusion": {
+            "tp": 1068,
+            "fp": 877,
+            "fn": 97,
+            "tn": 3465
+          },
+          "actual_mismatch_rate": 0.2115,
+          "predicted_mismatch_rate": 0.3532,
+          "precision": 0.5491,
+          "recall": 0.9167,
+          "f1": 0.6868
+        }
+      },
+      "hybrid_margin_0_015": {
+        "category_accuracy": 0.8295,
+        "macro_f1": 0.8316,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories",
+            "Electronics",
+            "Household",
+            "Books"
+          ],
+          "matrix": [
+            [
+              1114,
+              6,
+              5,
+              0
+            ],
+            [
+              146,
+              809,
+              80,
+              25
+            ],
+            [
+              377,
+              115,
+              1544,
+              76
+            ],
+            [
+              52,
+              24,
+              33,
+              1101
+            ]
+          ]
+        },
+        "mismatch_detection": {
+          "confusion": {
+            "tp": 1083,
+            "fp": 752,
+            "fn": 82,
+            "tn": 3590
+          },
+          "actual_mismatch_rate": 0.2115,
+          "predicted_mismatch_rate": 0.3332,
+          "precision": 0.5902,
+          "recall": 0.9296,
+          "f1": 0.722
+        }
+      },
+      "minilm_logreg": {
+        "category_accuracy": 0.9559,
+        "macro_f1": 0.9562,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories",
+            "Electronics",
+            "Household",
+            "Books"
+          ],
+          "matrix": [
+            [
+              1103,
+              6,
+              14,
+              2
+            ],
+            [
+              4,
+              1008,
+              40,
+              8
+            ],
+            [
+              32,
+              59,
+              1999,
+              22
+            ],
+            [
+              9,
+              15,
+              32,
+              1154
+            ]
+          ]
+        },
+        "mismatch_detection": {
+          "confusion": {
+            "tp": 1156,
+            "fp": 195,
+            "fn": 9,
+            "tn": 4147
+          },
+          "actual_mismatch_rate": 0.2115,
+          "predicted_mismatch_rate": 0.2453,
+          "precision": 0.8557,
+          "recall": 0.9923,
+          "f1": 0.9189
+        }
+      },
+      "minilm_linearsvm": {
+        "category_accuracy": 0.9595,
+        "macro_f1": 0.9596,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories",
+            "Electronics",
+            "Household",
+            "Books"
+          ],
+          "matrix": [
+            [
+              1104,
+              6,
+              14,
+              1
+            ],
+            [
+              5,
+              1001,
+              45,
+              9
+            ],
+            [
+              23,
+              52,
+              2017,
+              20
+            ],
+            [
+              8,
+              14,
+              26,
+              1162
+            ]
+          ]
+        },
+        "mismatch_detection": {
+          "confusion": {
+            "tp": 1157,
+            "fp": 179,
+            "fn": 8,
+            "tn": 4163
+          },
+          "actual_mismatch_rate": 0.2115,
+          "predicted_mismatch_rate": 0.2426,
+          "precision": 0.866,
+          "recall": 0.9931,
+          "f1": 0.9252
+        }
+      }
+    }
+  },
+  "artifacts": {
+    "logistic_regression": "/notebook/workspace/CatalogOps-Agent/models/ecommerce_minilm_logreg.joblib",
+    "linear_svm": "/notebook/workspace/CatalogOps-Agent/models/ecommerce_minilm_linearsvm.joblib"
+  },
+  "diagnostics": {
+    "train_distribution": {
+      "Clothing & Accessories": 4503,
+      "Household": 8450,
+      "Books": 4844,
+      "Electronics": 4244
+    },
+    "test_distribution": {
+      "Clothing & Accessories": 1125,
+      "Household": 2112,
+      "Books": 1210,
+      "Electronics": 1060
+    },
+    "cosine_margin_avg": 0.1145,
+    "cosine_margin_p50": 0.0975
+  }
+}

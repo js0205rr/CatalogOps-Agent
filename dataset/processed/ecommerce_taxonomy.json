@@ -1,0 +1,101 @@
+[
+  {
+    "category_id": "CLOTHING_ACCESSORIES",
+    "category_path": "Clothing & Accessories",
+    "keywords": [
+      "apparel",
+      "clothing",
+      "wear",
+      "shirt",
+      "dress",
+      "shoe",
+      "saree",
+      "kurta",
+      "jeans",
+      "sunglasses",
+      "bag",
+      "cotton",
+      "fashion"
+    ],
+    "required_attributes": [
+      "source_category",
+      "product_type"
+    ]
+  },
+  {
+    "category_id": "ELECTRONICS",
+    "category_path": "Electronics",
+    "keywords": [
+      "mobile",
+      "phone",
+      "smartphone",
+      "laptop",
+      "tablet",
+      "camera",
+      "bluetooth",
+      "wireless",
+      "headphone",
+      "speaker",
+      "charger",
+      "battery",
+      "usb",
+      "memory card",
+      "television",
+      "led tv"
+    ],
+    "required_attributes": [
+      "source_category",
+      "product_type"
+    ]
+  },
+  {
+    "category_id": "HOUSEHOLD",
+    "category_path": "Household",
+    "keywords": [
+      "home",
+      "kitchen",
+      "decor",
+      "wall",
+      "furniture",
+      "bedsheet",
+      "curtain",
+      "cookware",
+      "bottle",
+      "container",
+      "cleaning",
+      "storage",
+      "mattress",
+      "painting",
+      "lamp"
+    ],
+    "required_attributes": [
+      "source_category",
+      "product_type"
+    ]
+  },
+  {
+    "category_id": "BOOKS",
+    "category_path": "Books",
+    "keywords": [
+      "book",
+      "novel",
+      "author",
+      "paperback",
+      "hardcover",
+      "edition",
+      "publisher",
+      "story",
+      "guide",
+      "exam",
+      "dictionary",
+      "textbook",
+      "volume",
+      "chapter",
+      "biography"
+    ],
+    "required_attributes": [
+      "source_category",
+      "product_type"
+    ]
+  }
+]

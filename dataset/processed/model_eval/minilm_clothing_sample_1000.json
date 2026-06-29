@@ -1,0 +1,84 @@
+{
+  "csv_path": "dataset/processed/clothing_catalogops_mismatch_sample_1000.csv",
+  "row_count": 1000,
+  "elapsed_seconds": 29.664,
+  "model_path": "/notebook/workspace/CatalogOps-Agent/models/all-MiniLM-L6-v2",
+  "rule": {
+    "category_accuracy": 0.663,
+    "mismatch_detection": {
+      "confusion": {
+        "tn": 526,
+        "tp": 181,
+        "fp": 274,
+        "fn": 19
+      },
+      "actual_mismatch_rate": 0.2,
+      "predicted_mismatch_rate": 0.455,
+      "precision": 0.3978,
+      "recall": 0.905,
+      "f1": 0.5527
+    }
+  },
+  "minilm": {
+    "category_accuracy": 0.56,
+    "mismatch_detection": {
+      "confusion": {
+        "fp": 352,
+        "tn": 448,
+        "tp": 186,
+        "fn": 14
+      },
+      "actual_mismatch_rate": 0.2,
+      "predicted_mismatch_rate": 0.538,
+      "precision": 0.3457,
+      "recall": 0.93,
+      "f1": 0.5041
+    }
+  },
+  "hybrid_margin_0_015": {
+    "category_accuracy": 0.633,
+    "mismatch_detection": {
+      "confusion": {
+        "fp": 300,
+        "tn": 500,
+        "tp": 187,
+        "fn": 13
+      },
+      "actual_mismatch_rate": 0.2,
+      "predicted_mismatch_rate": 0.487,
+      "precision": 0.384,
+      "recall": 0.935,
+      "f1": 0.5444
+    }
+  },
+  "diagnostics": {
+    "rule_status_counts": {
+      "match": 545,
+      "mismatch": 455
+    },
+    "minilm_margin_avg": 0.0621,
+    "minilm_margin_p50": 0.047,
+    "minilm_top_categories": {
+      "Clothing & Accessories > Tops": 227,
+      "Clothing & Accessories > Accessories": 223,
+      "Clothing & Accessories > Innerwear": 128,
+      "Clothing & Accessories > Clothing Sets": 115,
+      "Clothing & Accessories > Bottoms": 109,
+      "Clothing & Accessories > Dresses": 107,
+      "Clothing & Accessories > Shoes": 79,
+      "Clothing & Accessories > Bags": 10,
+      "Clothing & Accessories > Apparel": 2
+    },
+    "rule_top_categories": {
+      "Clothing & Accessories > Apparel": 391,
+      "Clothing & Accessories > Tops": 212,
+      "Clothing & Accessories > Innerwear": 131,
+      "Clothing & Accessories > Clothing Sets": 93,
+      "Clothing & Accessories > Accessories": 69,
+      "Clothing & Accessories > Dresses": 49,
+      "Clothing & Accessories > Bottoms": 27,
+      "Clothing & Accessories > Shoes": 23,
+      "Clothing & Accessories > Bags": 5
+    }
+  }
+}

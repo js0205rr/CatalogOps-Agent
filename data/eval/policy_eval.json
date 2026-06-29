@@ -1,0 +1,11 @@
+[
+  {
+    "question": "智能手机缺少网络制式能否发布？",
+    "expected_doc_ids": ["attribute_schema"]
+  },
+  {
+    "question": "标题可以写全网最低吗？",
+    "expected_doc_ids": ["title_policy"]
+  }
+]
+

@@ -1,0 +1,88 @@
+{
+  "csv_path": "dataset/processed/clothing_catalogops_mismatch_sample_1000.csv",
+  "elapsed_seconds": 11.814,
+  "row_count": 1000,
+  "duplicate_count": 0,
+  "seller_count": 50,
+  "selected_policy_rows": 466,
+  "review_count": 466,
+  "metrics": {
+    "category_mismatch_rate": 0.455,
+    "attribute_missing_rate": 0.034,
+    "title_issue_rate": 0.328,
+    "decision_distribution": {
+      "pass": 534,
+      "reject": 466
+    },
+    "top_issue_categories": {
+      "Clothing & Accessories > Accessories": 112,
+      "Clothing & Accessories > Bottoms": 102,
+      "Clothing & Accessories > Tops": 74,
+      "Clothing & Accessories > Bags": 55,
+      "Clothing & Accessories > Innerwear": 43,
+      "Clothing & Accessories > Shoes": 34,
+      "Clothing & Accessories > Dresses": 21,
+      "Clothing & Accessories > Apparel": 17,
+      "Clothing & Accessories > Clothing Sets": 8
+    },
+    "top_issue_sellers": {
+      "seller_010": 19,
+      "seller_020": 19,
+      "seller_025": 19,
+      "seller_040": 19,
+      "seller_045": 19,
+      "seller_030": 18,
+      "seller_000": 18,
+      "seller_005": 17,
+      "seller_015": 17,
+      "seller_035": 17
+    }
+  },
+  "issue_summary": [
+    {
+      "issue_type": "category_mismatch",
+      "count": 455,
+      "severity": "blocker"
+    },
+    {
+      "issue_type": "missing_attribute",
+      "count": 47,
+      "severity": "blocker"
+    },
+    {
+      "issue_type": "title_violation",
+      "count": 360,
+      "severity": "blocker"
+    }
+  ],
+  "trace": [
+    {
+      "node": "profile_catalog_csv",
+      "detail": "Loaded 1000 rows"
+    },
+    {
+      "node": "plan_batch_strategy",
+      "detail": "full_rule_scan"
+    },
+    {
+      "node": "run_batch_precheck",
+      "detail": "Found 19 precheck issues"
+    },
+    {
+      "node": "run_batch_category_prediction",
+      "detail": "Rule-predicted 1000 rows; LLM calls: 0"
+    },
+    {
+      "node": "selective_policy_retrieval",
+      "detail": "Retrieved policy for 466 risk rows"
+    },
+    {
+      "node": "aggregate_batch_issues",
+      "detail": "Aggregated 862 issues"
+    },
+    {
+      "node": "generate_batch_report",
+      "detail": "Generated markdown batch report"
+    }
+  ]
+}

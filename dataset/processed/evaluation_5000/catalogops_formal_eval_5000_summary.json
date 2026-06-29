@@ -1,0 +1,165 @@
+{
+  "input_csv": "/notebook/workspace/CatalogOps-Agent/dataset/processed/ecommerce_catalogops_mismatch_20pct.csv",
+  "sample_csv": "dataset/processed/evaluation_5000/catalogops_eval_sample_5000.csv",
+  "output_dir": "dataset/processed/evaluation_5000",
+  "sample_size": 5000,
+  "generated_at": "2026-06-29T04:35:47Z",
+  "use_mock": true,
+  "label_notes": {
+    "category_mismatch": "Expected positive when attributes.source_category differs from seller_category.",
+    "attribute_missing": "Expected positive when required attributes for the true/top category are absent.",
+    "title_issue": "Expected positive from deterministic title rule terms.",
+    "cost": "Mock/rule-first mode estimates LLM calls and token cost as zero."
+  },
+  "metrics": {
+    "category_accuracy": {
+      "accuracy": 0.9046,
+      "correct": 4523,
+      "total": 5000,
+      "by_category": {
+        "Books": {
+          "accuracy": 0.9216,
+          "correct": 1152,
+          "total": 1250
+        },
+        "Clothing & Accessories": {
+          "accuracy": 0.9872,
+          "correct": 1234,
+          "total": 1250
+        },
+        "Electronics": {
+          "accuracy": 0.8912,
+          "correct": 1114,
+          "total": 1250
+        },
+        "Household": {
+          "accuracy": 0.8184,
+          "correct": 1023,
+          "total": 1250
+        }
+      }
+    },
+    "issue_classification": {
+      "by_issue_type": {
+        "category_mismatch": {
+          "tp": 2420,
+          "fp": 257,
+          "fn": 80,
+          "tn": 2243,
+          "precision": 0.903997,
+          "recall": 0.968,
+          "f1": 0.934904,
+          "support": 2500,
+          "predicted_positive": 2677
+        },
+        "attribute_missing": {
+          "tp": 3350,
+          "fp": 87,
+          "fn": 400,
+          "tn": 1163,
+          "precision": 0.974687,
+          "recall": 0.893333,
+          "f1": 0.932239,
+          "support": 3750,
+          "predicted_positive": 3437
+        },
+        "title_issue": {
+          "tp": 103,
+          "fp": 456,
+          "fn": 0,
+          "tn": 4441,
+          "precision": 0.184258,
+          "recall": 1.0,
+          "f1": 0.311178,
+          "support": 103,
+          "predicted_positive": 559
+        },
+        "any_issue": {
+          "tp": 4258,
+          "fp": 45,
+          "fn": 130,
+          "tn": 567,
+          "precision": 0.989542,
+          "recall": 0.970374,
+          "f1": 0.979864,
+          "support": 4388,
+          "predicted_positive": 4303
+        }
+      },
+      "macro_f1": 0.789546,
+      "label_distribution": {
+        "category_mismatch": 2500,
+        "attribute_missing": 3750,
+        "title_issue": 103,
+        "any_issue": 4388
+      },
+      "prediction_distribution": {
+        "category_mismatch": 2677,
+        "attribute_missing": 3437,
+        "title_issue": 559,
+        "any_issue": 4303
+      }
+    },
+    "batch_rates": {
+      "category_mismatch_rate": 0.5354,
+      "attribute_missing_rate": 0.6874,
+      "title_issue_rate": 0.1118,
+      "decision_distribution": {
+        "needs_revision": 1539,
+        "reject": 2764,
+        "pass": 697
+      },
+      "top_issue_categories": {
+        "Books": 1250,
+        "Electronics": 1250,
+        "Household": 1151,
+        "Clothing & Accessories": 652
+      },
+      "top_issue_sellers": {
+        "seller_090": 53,
+        "seller_065": 53,
+        "seller_000": 51,
+        "seller_098": 51,
+        "seller_094": 49,
+        "seller_010": 49,
+        "seller_013": 49,
+        "seller_031": 49,
+        "seller_041": 49,
+        "seller_047": 49
+      }
+    },
+    "ingestion": {
+      "documents": 29,
+      "chunks": 105,
+      "mode": "mock",
+      "index_path": "/notebook/workspace/CatalogOps-Agent/data/policy_index.json"
+    }
+  },
+  "evidence_coverage": {
+    "review_count": 4303,
+    "review_issue_count": 11743,
+    "review_issues_without_evidence": {},
+    "review_issue_evidence_coverage": 1.0,
+    "avg_evidence_per_review": 13.0,
+    "avg_evidence_coverage_score": 100.0,
+    "covered_issues": 11743,
+    "downgraded_issues": 0,
+    "removed_issues": 0,
+    "selected_policy_rows": 4303,
+    "policy_contexts_with_hits": 4303,
+    "policy_context_hit_rate": 1.0
+  },
+  "runtime_cost": {
+    "elapsed_seconds": 185.622,
+    "rows_per_second": 26.936414,
+    "selected_policy_rows": 4303,
+    "full_review_rows": 4303,
+    "estimated_llm_calls": 0,
+    "estimated_token_cost_usd": 0.0
+  },
+  "outputs": {
+    "summary_json": "dataset/processed/evaluation_5000/catalogops_formal_eval_5000_summary.json",
+    "report_markdown": "dataset/processed/evaluation_5000/catalogops_formal_eval_5000_report.md",
+    "predictions_csv": "dataset/processed/evaluation_5000/catalogops_formal_eval_5000_predictions.csv"
+  }
+}

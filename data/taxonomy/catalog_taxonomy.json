@@ -1,0 +1,441 @@
+[
+  {
+    "category_id": "1001",
+    "category_path": "服饰鞋包/女装/T恤",
+    "terms": [
+      "t恤",
+      "短袖",
+      "纯棉",
+      "女装",
+      "上衣"
+    ],
+    "required_attributes": [
+      "品牌",
+      "材质",
+      "尺码",
+      "颜色"
+    ]
+  },
+  {
+    "category_id": "2001",
+    "category_path": "数码家电/手机通讯/智能手机",
+    "terms": [
+      "智能手机",
+      "5g",
+      "内存",
+      "屏幕"
+    ],
+    "required_attributes": [
+      "品牌",
+      "型号",
+      "存储容量",
+      "网络制式"
+    ]
+  },
+  {
+    "category_id": "2002",
+    "category_path": "数码配件/手机配件/手机壳",
+    "terms": [
+      "手机壳",
+      "保护壳",
+      "保护套",
+      "透明壳"
+    ],
+    "required_attributes": [
+      "品牌",
+      "适用机型",
+      "材质",
+      "颜色"
+    ]
+  },
+  {
+    "category_id": "2003",
+    "category_path": "数码配件/音频设备/蓝牙耳机",
+    "terms": [
+      "蓝牙耳机",
+      "耳机",
+      "降噪",
+      "入耳式"
+    ],
+    "required_attributes": [
+      "品牌",
+      "型号",
+      "连接方式",
+      "续航时间"
+    ]
+  },
+  {
+    "category_id": "3001",
+    "category_path": "食品饮料/休闲食品/坚果",
+    "terms": [
+      "坚果",
+      "腰果",
+      "杏仁",
+      "零食",
+      "净含量"
+    ],
+    "required_attributes": [
+      "品牌",
+      "净含量",
+      "保质期",
+      "生产日期"
+    ]
+  },
+  {
+    "category_id": "CLO-APPAREL",
+    "category_path": "Clothing & Accessories > Apparel",
+    "terms": [
+      "apparel",
+      "clothing",
+      "wear",
+      "garment",
+      "outfit"
+    ],
+    "required_attributes": [
+      "brand",
+      "product_type",
+      "gender",
+      "size",
+      "color",
+      "material"
+    ]
+  },
+  {
+    "category_id": "CLO-TOPS",
+    "category_path": "Clothing & Accessories > Tops",
+    "terms": [
+      "t-shirt",
+      "tshirt",
+      "tee",
+      "shirt",
+      "shirts",
+      "top",
+      "tops",
+      "blouse",
+      "blouses",
+      "hoodie",
+      "sweatshirt",
+      "jacket",
+      "coat"
+    ],
+    "required_attributes": [
+      "brand",
+      "product_type",
+      "gender",
+      "size",
+      "color",
+      "material"
+    ]
+  },
+  {
+    "category_id": "CLO-BOTTOMS",
+    "category_path": "Clothing & Accessories > Bottoms",
+    "terms": [
+      "jeans",
+      "trouser",
+      "trousers",
+      "pants",
+      "pant",
+      "leggings",
+      "shorts",
+      "palazzo",
+      "jogger",
+      "joggers"
+    ],
+    "required_attributes": [
+      "brand",
+      "product_type",
+      "gender",
+      "size",
+      "color",
+      "material"
+    ]
+  },
+  {
+    "category_id": "CLO-DRESSES",
+    "category_path": "Clothing & Accessories > Dresses",
+    "terms": [
+      "dress",
+      "dresses",
+      "gown",
+      "saree",
+      "kurta",
+      "kurti",
+      "lehenga",
+      "skirt",
+      "romper",
+      "jumpsuit",
+      "swimwear",
+      "frock"
+    ],
+    "required_attributes": [
+      "brand",
+      "product_type",
+      "gender",
+      "size",
+      "color",
+      "material"
+    ]
+  },
+  {
+    "category_id": "CLO-SETS",
+    "category_path": "Clothing & Accessories > Clothing Sets",
+    "terms": [
+      "set",
+      "sets",
+      "outfit",
+      "outfits",
+      "suit",
+      "suits",
+      "tracksuit",
+      "night suit",
+      "sleep suit"
+    ],
+    "required_attributes": [
+      "brand",
+      "product_type",
+      "gender",
+      "size",
+      "color",
+      "material",
+      "pieces_in_set"
+    ]
+  },
+  {
+    "category_id": "CLO-INNERWEAR",
+    "category_path": "Clothing & Accessories > Innerwear",
+    "terms": [
+      "bra",
+      "brief",
+      "briefs",
+      "underwear",
+      "innerwear",
+      "panty",
+      "panties",
+      "lingerie",
+      "vest",
+      "sock",
+      "socks"
+    ],
+    "required_attributes": [
+      "brand",
+      "product_type",
+      "gender",
+      "size",
+      "color",
+      "material"
+    ]
+  },
+  {
+    "category_id": "CLO-SHOES",
+    "category_path": "Clothing & Accessories > Shoes",
+    "terms": [
+      "shoe",
+      "shoes",
+      "sneaker",
+      "sneakers",
+      "sandal",
+      "sandals",
+      "slipper",
+      "slippers",
+      "boot",
+      "boots",
+      "loafer",
+      "loafers",
+      "heel",
+      "heels",
+      "footwear"
+    ],
+    "required_attributes": [
+      "brand",
+      "product_type",
+      "gender",
+      "size",
+      "color",
+      "material"
+    ]
+  },
+  {
+    "category_id": "CLO-BAGS",
+    "category_path": "Clothing & Accessories > Bags",
+    "terms": [
+      "bag",
+      "bags",
+      "wallet",
+      "wallets",
+      "backpack",
+      "backpacks",
+      "purse",
+      "handbag",
+      "handbags",
+      "clutch",
+      "tote"
+    ],
+    "required_attributes": [
+      "brand",
+      "product_type",
+      "color",
+      "material"
+    ]
+  },
+  {
+    "category_id": "CLO-ACCESSORIES",
+    "category_path": "Clothing & Accessories > Accessories",
+    "terms": [
+      "sunglasses",
+      "belt",
+      "belts",
+      "watch",
+      "watches",
+      "jewellery",
+      "jewelry",
+      "necklace",
+      "bracelet",
+      "cap",
+      "hat",
+      "scarf",
+      "tie",
+      "hairband",
+      "headband",
+      "glasses"
+    ],
+    "required_attributes": [
+      "brand",
+      "product_type",
+      "color",
+      "material"
+    ]
+  },
+  {
+    "category_id": "ELEC",
+    "category_path": "Electronics",
+    "terms": ["electronics", "electronic", "device", "gadget", "digital"],
+    "required_attributes": ["brand", "product_type", "model", "key_specification"]
+  },
+  {
+    "category_id": "ELEC-MOBILE",
+    "category_path": "Electronics > Mobile Phones",
+    "terms": ["mobile", "phone", "smartphone", "cell phone", "android", "iphone", "handset"],
+    "required_attributes": ["brand", "product_type", "model", "storage_capacity", "network_type"]
+  },
+  {
+    "category_id": "ELEC-AUDIO",
+    "category_path": "Electronics > Audio",
+    "terms": ["headphone", "headphones", "earphone", "earphones", "earbud", "earbuds", "speaker", "bluetooth", "wireless", "soundbar"],
+    "required_attributes": ["brand", "product_type", "model", "connectivity"]
+  },
+  {
+    "category_id": "ELEC-COMPUTERS",
+    "category_path": "Electronics > Computers & Accessories",
+    "terms": ["laptop", "computer", "keyboard", "mouse", "monitor", "processor", "ram", "hard disk", "ssd", "router"],
+    "required_attributes": ["brand", "product_type", "model", "processor_or_capacity"]
+  },
+  {
+    "category_id": "ELEC-CAMERA",
+    "category_path": "Electronics > Cameras",
+    "terms": ["camera", "dslr", "lens", "webcam", "camcorder", "tripod", "cctv"],
+    "required_attributes": ["brand", "product_type", "model", "resolution_or_mount"]
+  },
+  {
+    "category_id": "ELEC-STORAGE",
+    "category_path": "Electronics > Storage & Memory",
+    "terms": ["memory card", "microsd", "sd card", "pendrive", "pen drive", "flash drive", "hard drive", "ssd"],
+    "required_attributes": ["brand", "product_type", "storage_capacity", "interface"]
+  },
+  {
+    "category_id": "ELEC-POWER",
+    "category_path": "Electronics > Chargers & Cables",
+    "terms": ["charger", "charging", "cable", "adapter", "power bank", "usb", "type-c", "lightning"],
+    "required_attributes": ["brand", "product_type", "connector_type", "power_rating"]
+  },
+  {
+    "category_id": "HOME",
+    "category_path": "Household",
+    "terms": ["household", "home", "kitchen", "decor", "furniture", "storage", "cleaning"],
+    "required_attributes": ["brand", "product_type", "material", "use_case"]
+  },
+  {
+    "category_id": "HOME-DECOR",
+    "category_path": "Household > Home Decor",
+    "terms": ["decor", "painting", "wall art", "frame", "vase", "clock", "showpiece", "poster"],
+    "required_attributes": ["brand", "product_type", "material", "dimensions", "color"]
+  },
+  {
+    "category_id": "HOME-KITCHEN",
+    "category_path": "Household > Kitchen & Dining",
+    "terms": ["kitchen", "cookware", "bottle", "container", "dinner set", "plate", "pan", "knife", "jar"],
+    "required_attributes": ["brand", "product_type", "material", "capacity_or_size"]
+  },
+  {
+    "category_id": "HOME-FURNITURE",
+    "category_path": "Household > Furniture",
+    "terms": ["furniture", "chair", "table", "desk", "rack", "shelf", "wardrobe", "cabinet", "sofa"],
+    "required_attributes": ["brand", "product_type", "material", "dimensions", "assembly_required"]
+  },
+  {
+    "category_id": "HOME-BEDDING",
+    "category_path": "Household > Bedding & Bath",
+    "terms": ["bedsheet", "bed sheet", "blanket", "pillow", "towel", "bath", "mattress", "curtain"],
+    "required_attributes": ["brand", "product_type", "material", "size", "color"]
+  },
+  {
+    "category_id": "HOME-STORAGE",
+    "category_path": "Household > Storage & Organization",
+    "terms": ["storage", "organizer", "box", "basket", "hanger", "holder", "stand", "rack"],
+    "required_attributes": ["brand", "product_type", "material", "dimensions"]
+  },
+  {
+    "category_id": "HOME-CLEANING",
+    "category_path": "Household > Cleaning Supplies",
+    "terms": ["cleaning", "mop", "broom", "brush", "duster", "scrub", "wipe", "trash bag"],
+    "required_attributes": ["brand", "product_type", "material", "use_case"]
+  },
+  {
+    "category_id": "HOME-LIGHTING",
+    "category_path": "Household > Lighting",
+    "terms": ["lamp", "light", "lighting", "bulb", "led", "lantern", "night light"],
+    "required_attributes": ["brand", "product_type", "power_rating", "color_or_finish"]
+  },
+  {
+    "category_id": "BOOKS",
+    "category_path": "Books",
+    "terms": ["book", "books", "paperback", "hardcover", "author", "publisher", "edition"],
+    "required_attributes": ["book_title", "author", "format", "language"]
+  },
+  {
+    "category_id": "BOOKS-FICTION",
+    "category_path": "Books > Fiction",
+    "terms": ["novel", "fiction", "story", "stories", "literature", "thriller", "romance", "fantasy"],
+    "required_attributes": ["book_title", "author", "format", "language"]
+  },
+  {
+    "category_id": "BOOKS-NONFICTION",
+    "category_path": "Books > Non-Fiction",
+    "terms": ["non-fiction", "nonfiction", "biography", "memoir", "history", "business", "self help", "psychology"],
+    "required_attributes": ["book_title", "author", "format", "language"]
+  },
+  {
+    "category_id": "BOOKS-ACADEMIC",
+    "category_path": "Books > Academic & Exam Prep",
+    "terms": ["exam", "guide", "textbook", "study", "solved papers", "question bank", "engineering", "medical"],
+    "required_attributes": ["book_title", "author_or_editor", "format", "edition", "exam_or_subject"]
+  },
+  {
+    "category_id": "BOOKS-CHILDREN",
+    "category_path": "Books > Children Books",
+    "terms": ["children", "kids", "picture book", "activity book", "coloring", "storybook", "nursery"],
+    "required_attributes": ["book_title", "author_or_editor", "format", "age_range"]
+  },
+  {
+    "category_id": "BOOKS-REFERENCE",
+    "category_path": "Books > Reference",
+    "terms": ["dictionary", "encyclopedia", "reference", "manual", "handbook", "atlas"],
+    "required_attributes": ["book_title", "author_or_editor", "format", "language"]
+  },
+  {
+    "category_id": "BOOKS-RELIGION",
+    "category_path": "Books > Religion & Spirituality",
+    "terms": ["religion", "spirituality", "bible", "gita", "quran", "devotional", "meditation"],
+    "required_attributes": ["book_title", "author_or_editor", "format", "language"]
+  }
+]

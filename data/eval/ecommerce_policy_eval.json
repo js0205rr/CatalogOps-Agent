@@ -1,0 +1,66 @@
+[
+  {
+    "question": "What category policy applies when a cotton dress is listed under Electronics?",
+    "expected_doc_ids": ["clothing_category_policy", "clothing_mismatch_cases"]
+  },
+  {
+    "question": "Which required attributes should be present for Clothing and Accessories apparel listings?",
+    "expected_doc_ids": ["clothing_attribute_schema"]
+  },
+  {
+    "question": "Can a clothing title use keyword stuffing such as dress shoes jacket pants in one listing?",
+    "expected_doc_ids": ["clothing_title_policy", "clothing_keyword_stuffing_policy"]
+  },
+  {
+    "question": "What policy evidence covers prohibited medical or slimming claims in clothing listings?",
+    "expected_doc_ids": ["clothing_prohibited_claims_policy"]
+  },
+  {
+    "question": "What category policy applies when a smartphone charger is listed as a mobile phone?",
+    "expected_doc_ids": ["electronics_category_policy", "electronics_mismatch_cases"]
+  },
+  {
+    "question": "Which required attributes should an Electronics smartphone or headset listing include?",
+    "expected_doc_ids": ["electronics_attribute_schema"]
+  },
+  {
+    "question": "Can an Electronics product title claim 100 percent safe, best ever, or official Apple replacement?",
+    "expected_doc_ids": ["electronics_title_policy", "electronics_prohibited_claims_policy"]
+  },
+  {
+    "question": "What evidence identifies mismatch cases for electronics accessories versus actual devices?",
+    "expected_doc_ids": ["electronics_mismatch_cases", "electronics_category_policy"]
+  },
+  {
+    "question": "What category policy applies when cookware or bedding is listed as Books?",
+    "expected_doc_ids": ["household_category_policy", "household_mismatch_cases"]
+  },
+  {
+    "question": "Which required attributes should Household kitchen appliance or bedding listings include?",
+    "expected_doc_ids": ["household_attribute_schema"]
+  },
+  {
+    "question": "Can a Household product title claim permanent germ elimination or hospital grade results?",
+    "expected_doc_ids": ["household_title_policy", "household_prohibited_claims_policy"]
+  },
+  {
+    "question": "What evidence covers Household mismatch cases such as appliance parts listed as appliances?",
+    "expected_doc_ids": ["household_mismatch_cases", "household_category_policy"]
+  },
+  {
+    "question": "What category policy applies when a textbook is listed under Electronics?",
+    "expected_doc_ids": ["books_category_policy", "books_mismatch_cases"]
+  },
+  {
+    "question": "Which required attributes should Books listings include for ISBN, author, format, or edition?",
+    "expected_doc_ids": ["books_attribute_schema"]
+  },
+  {
+    "question": "Can a Books title claim guaranteed exam pass or unauthorized official answer key?",
+    "expected_doc_ids": ["books_title_policy", "books_prohibited_claims_policy"]
+  },
+  {
+    "question": "What evidence covers Books mismatch cases such as ebook access codes listed as printed books?",
+    "expected_doc_ids": ["books_mismatch_cases", "books_category_policy"]
+  }
+]

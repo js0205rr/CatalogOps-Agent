@@ -1,0 +1,1265 @@
+{
+  "dataset": "/notebook/workspace/CatalogOps-Agent/data/eval/ecommerce_policy_eval.json",
+  "results": [
+    {
+      "total": 16,
+      "summary": {
+        "mrr": 0.7916666666666666,
+        "recall@1": 0.5,
+        "hit@1": 0.6875,
+        "ndcg@1": 0.6875,
+        "recall@3": 0.71875,
+        "hit@3": 0.9375,
+        "ndcg@3": 0.6916084977392057,
+        "recall@5": 0.75,
+        "hit@5": 0.9375,
+        "ndcg@5": 0.7081127553999926
+      },
+      "details": [
+        {
+          "question": "What category policy applies when a cotton dress is listed under Electronics?",
+          "expected_doc_ids": [
+            "clothing_category_policy",
+            "clothing_mismatch_cases"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_category_policy",
+            "books_mismatch_cases",
+            "clothing_category_policy"
+          ],
+          "metrics": {
+            "mrr": 0.3333333333333333,
+            "recall@1": 0.0,
+            "hit@1": 0.0,
+            "ndcg@1": 0.0,
+            "recall@3": 0.5,
+            "hit@3": 1.0,
+            "ndcg@3": 0.3065735963827292,
+            "recall@5": 0.5,
+            "hit@5": 1.0,
+            "ndcg@5": 0.3065735963827292
+          }
+        },
+        {
+          "question": "Which required attributes should be present for Clothing and Accessories apparel listings?",
+          "expected_doc_ids": [
+            "clothing_attribute_schema"
+          ],
+          "retrieved_doc_ids": [
+            "clothing_attribute_schema",
+            "clothing_category_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 1.0,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "Can a clothing title use keyword stuffing such as dress shoes jacket pants in one listing?",
+          "expected_doc_ids": [
+            "clothing_title_policy",
+            "clothing_keyword_stuffing_policy"
+          ],
+          "retrieved_doc_ids": [
+            "clothing_keyword_stuffing_policy",
+            "clothing_mismatch_cases",
+            "clothing_title_policy",
+            "books_attribute_schema"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 0.9197207891481876,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 0.9197207891481876
+          }
+        },
+        {
+          "question": "What policy evidence covers prohibited medical or slimming claims in clothing listings?",
+          "expected_doc_ids": [
+            "clothing_prohibited_claims_policy"
+          ],
+          "retrieved_doc_ids": [
+            "clothing_prohibited_claims_policy",
+            "books_prohibited_claims_policy",
+            "clothing_keyword_stuffing_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 1.0,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "What category policy applies when a smartphone charger is listed as a mobile phone?",
+          "expected_doc_ids": [
+            "electronics_category_policy",
+            "electronics_mismatch_cases"
+          ],
+          "retrieved_doc_ids": [
+            "clothing_mismatch_cases",
+            "electronics_mismatch_cases"
+          ],
+          "metrics": {
+            "mrr": 0.5,
+            "recall@1": 0.0,
+            "hit@1": 0.0,
+            "ndcg@1": 0.0,
+            "recall@3": 0.5,
+            "hit@3": 1.0,
+            "ndcg@3": 0.38685280723454163,
+            "recall@5": 0.5,
+            "hit@5": 1.0,
+            "ndcg@5": 0.38685280723454163
+          }
+        },
+        {
+          "question": "Which required attributes should an Electronics smartphone or headset listing include?",
+          "expected_doc_ids": [
+            "electronics_attribute_schema"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_attribute_schema",
+            "books_attribute_schema",
+            "clothing_attribute_schema",
+            "clothing_title_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 1.0,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "Can an Electronics product title claim 100 percent safe, best ever, or official Apple replacement?",
+          "expected_doc_ids": [
+            "electronics_title_policy",
+            "electronics_prohibited_claims_policy"
+          ],
+          "retrieved_doc_ids": [
+            "books_prohibited_claims_policy",
+            "clothing_keyword_stuffing_policy",
+            "electronics_title_policy",
+            "books_title_policy",
+            "books_mismatch_cases"
+          ],
+          "metrics": {
+            "mrr": 0.3333333333333333,
+            "recall@1": 0.0,
+            "hit@1": 0.0,
+            "ndcg@1": 0.0,
+            "recall@3": 0.5,
+            "hit@3": 1.0,
+            "ndcg@3": 0.3065735963827292,
+            "recall@5": 0.5,
+            "hit@5": 1.0,
+            "ndcg@5": 0.3065735963827292
+          }
+        },
+        {
+          "question": "What evidence identifies mismatch cases for electronics accessories versus actual devices?",
+          "expected_doc_ids": [
+            "electronics_mismatch_cases",
+            "electronics_category_policy"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_mismatch_cases",
+            "clothing_mismatch_cases",
+            "books_mismatch_cases",
+            "electronics_category_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 0.5,
+            "hit@3": 1.0,
+            "ndcg@3": 0.6131471927654584,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 0.8772153153380493
+          }
+        },
+        {
+          "question": "What category policy applies when cookware or bedding is listed as Books?",
+          "expected_doc_ids": [
+            "household_category_policy",
+            "household_mismatch_cases"
+          ],
+          "retrieved_doc_ids": [
+            "books_attribute_schema",
+            "clothing_mismatch_cases",
+            "books_category_policy",
+            "books_mismatch_cases"
+          ],
+          "metrics": {
+            "mrr": 0.0,
+            "recall@1": 0.0,
+            "hit@1": 0.0,
+            "ndcg@1": 0.0,
+            "recall@3": 0.0,
+            "hit@3": 0.0,
+            "ndcg@3": 0.0,
+            "recall@5": 0.0,
+            "hit@5": 0.0,
+            "ndcg@5": 0.0
+          }
+        },
+        {
+          "question": "Which required attributes should Household kitchen appliance or bedding listings include?",
+          "expected_doc_ids": [
+            "household_attribute_schema"
+          ],
+          "retrieved_doc_ids": [
+            "household_attribute_schema",
+            "books_attribute_schema",
+            "clothing_attribute_schema",
+            "electronics_attribute_schema"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 1.0,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "Can a Household product title claim permanent germ elimination or hospital grade results?",
+          "expected_doc_ids": [
+            "household_title_policy",
+            "household_prohibited_claims_policy"
+          ],
+          "retrieved_doc_ids": [
+            "household_title_policy",
+            "books_mismatch_cases",
+            "books_category_policy",
+            "household_attribute_schema"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 0.5,
+            "hit@3": 1.0,
+            "ndcg@3": 0.6131471927654584,
+            "recall@5": 0.5,
+            "hit@5": 1.0,
+            "ndcg@5": 0.6131471927654584
+          }
+        },
+        {
+          "question": "What evidence covers Household mismatch cases such as appliance parts listed as appliances?",
+          "expected_doc_ids": [
+            "household_mismatch_cases",
+            "household_category_policy"
+          ],
+          "retrieved_doc_ids": [
+            "household_mismatch_cases",
+            "books_mismatch_cases",
+            "books_prohibited_claims_policy",
+            "books_title_policy",
+            "household_attribute_schema"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 0.5,
+            "hit@3": 1.0,
+            "ndcg@3": 0.6131471927654584,
+            "recall@5": 0.5,
+            "hit@5": 1.0,
+            "ndcg@5": 0.6131471927654584
+          }
+        },
+        {
+          "question": "What category policy applies when a textbook is listed under Electronics?",
+          "expected_doc_ids": [
+            "books_category_policy",
+            "books_mismatch_cases"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_category_policy",
+            "books_mismatch_cases",
+            "clothing_category_policy"
+          ],
+          "metrics": {
+            "mrr": 0.5,
+            "recall@1": 0.0,
+            "hit@1": 0.0,
+            "ndcg@1": 0.0,
+            "recall@3": 0.5,
+            "hit@3": 1.0,
+            "ndcg@3": 0.38685280723454163,
+            "recall@5": 0.5,
+            "hit@5": 1.0,
+            "ndcg@5": 0.38685280723454163
+          }
+        },
+        {
+          "question": "Which required attributes should Books listings include for ISBN, author, format, or edition?",
+          "expected_doc_ids": [
+            "books_attribute_schema"
+          ],
+          "retrieved_doc_ids": [
+            "books_attribute_schema",
+            "books_title_policy",
+            "books_prohibited_claims_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 1.0,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "Can a Books title claim guaranteed exam pass or unauthorized official answer key?",
+          "expected_doc_ids": [
+            "books_title_policy",
+            "books_prohibited_claims_policy"
+          ],
+          "retrieved_doc_ids": [
+            "books_title_policy",
+            "books_prohibited_claims_policy",
+            "books_attribute_schema"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "What evidence covers Books mismatch cases such as ebook access codes listed as printed books?",
+          "expected_doc_ids": [
+            "books_mismatch_cases",
+            "books_category_policy"
+          ],
+          "retrieved_doc_ids": [
+            "books_mismatch_cases",
+            "books_attribute_schema",
+            "books_category_policy",
+            "books_prohibited_claims_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 0.9197207891481876,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 0.9197207891481876
+          }
+        }
+      ],
+      "variant": "local_none",
+      "status": "ok",
+      "settings": {
+        "use_mock": true,
+        "milvus_collection": "catalogops_policy_chunks",
+        "embedding_provider": "minilm",
+        "embedding_model": "text-embedding-v3",
+        "embedding_model_path": "/notebook/workspace/CatalogOps-Agent/models/all-MiniLM-L6-v2",
+        "candidate_top_n": 12,
+        "reranker_mode": "none",
+        "rrf_k": 60
+      },
+      "ingestion": null
+    },
+    {
+      "total": 16,
+      "summary": {
+        "mrr": 0.78125,
+        "recall@1": 0.5,
+        "hit@1": 0.75,
+        "ndcg@1": 0.75,
+        "recall@3": 0.71875,
+        "hit@3": 0.8125,
+        "ndcg@3": 0.7118807575635012,
+        "recall@5": 0.75,
+        "hit@5": 0.8125,
+        "ndcg@5": 0.7267056146115822
+      },
+      "details": [
+        {
+          "question": "What category policy applies when a cotton dress is listed under Electronics?",
+          "expected_doc_ids": [
+            "clothing_category_policy",
+            "clothing_mismatch_cases"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_category_policy",
+            "electronics_mismatch_cases"
+          ],
+          "metrics": {
+            "mrr": 0.0,
+            "recall@1": 0.0,
+            "hit@1": 0.0,
+            "ndcg@1": 0.0,
+            "recall@3": 0.0,
+            "hit@3": 0.0,
+            "ndcg@3": 0.0,
+            "recall@5": 0.0,
+            "hit@5": 0.0,
+            "ndcg@5": 0.0
+          }
+        },
+        {
+          "question": "Which required attributes should be present for Clothing and Accessories apparel listings?",
+          "expected_doc_ids": [
+            "clothing_attribute_schema"
+          ],
+          "retrieved_doc_ids": [
+            "clothing_attribute_schema",
+            "clothing_category_policy",
+            "electronics_attribute_schema"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 1.0,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "Can a clothing title use keyword stuffing such as dress shoes jacket pants in one listing?",
+          "expected_doc_ids": [
+            "clothing_title_policy",
+            "clothing_keyword_stuffing_policy"
+          ],
+          "retrieved_doc_ids": [
+            "clothing_keyword_stuffing_policy",
+            "books_attribute_schema",
+            "books_title_policy",
+            "clothing_category_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 0.5,
+            "hit@3": 1.0,
+            "ndcg@3": 0.6131471927654584,
+            "recall@5": 0.5,
+            "hit@5": 1.0,
+            "ndcg@5": 0.6131471927654584
+          }
+        },
+        {
+          "question": "What policy evidence covers prohibited medical or slimming claims in clothing listings?",
+          "expected_doc_ids": [
+            "clothing_prohibited_claims_policy"
+          ],
+          "retrieved_doc_ids": [
+            "clothing_prohibited_claims_policy",
+            "books_prohibited_claims_policy",
+            "electronics_prohibited_claims_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 1.0,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "What category policy applies when a smartphone charger is listed as a mobile phone?",
+          "expected_doc_ids": [
+            "electronics_category_policy",
+            "electronics_mismatch_cases"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_mismatch_cases",
+            "electronics_category_policy",
+            "clothing_mismatch_cases"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "Which required attributes should an Electronics smartphone or headset listing include?",
+          "expected_doc_ids": [
+            "electronics_attribute_schema"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_attribute_schema",
+            "electronics_title_policy",
+            "electronics_category_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 1.0,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "Can an Electronics product title claim 100 percent safe, best ever, or official Apple replacement?",
+          "expected_doc_ids": [
+            "electronics_title_policy",
+            "electronics_prohibited_claims_policy"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_title_policy",
+            "electronics_category_policy",
+            "electronics_prohibited_claims_policy",
+            "clothing_keyword_stuffing_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 0.9197207891481876,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 0.9197207891481876
+          }
+        },
+        {
+          "question": "What evidence identifies mismatch cases for electronics accessories versus actual devices?",
+          "expected_doc_ids": [
+            "electronics_mismatch_cases",
+            "electronics_category_policy"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_mismatch_cases",
+            "electronics_category_policy",
+            "electronics_title_policy",
+            "electronics_attribute_schema"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "What category policy applies when cookware or bedding is listed as Books?",
+          "expected_doc_ids": [
+            "household_category_policy",
+            "household_mismatch_cases"
+          ],
+          "retrieved_doc_ids": [
+            "books_attribute_schema",
+            "books_category_policy",
+            "books_mismatch_cases",
+            "books_prohibited_claims_policy",
+            "books_title_policy"
+          ],
+          "metrics": {
+            "mrr": 0.0,
+            "recall@1": 0.0,
+            "hit@1": 0.0,
+            "ndcg@1": 0.0,
+            "recall@3": 0.0,
+            "hit@3": 0.0,
+            "ndcg@3": 0.0,
+            "recall@5": 0.0,
+            "hit@5": 0.0,
+            "ndcg@5": 0.0
+          }
+        },
+        {
+          "question": "Which required attributes should Household kitchen appliance or bedding listings include?",
+          "expected_doc_ids": [
+            "household_attribute_schema"
+          ],
+          "retrieved_doc_ids": [
+            "household_attribute_schema",
+            "household_category_policy",
+            "household_mismatch_cases",
+            "household_prohibited_claims_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 1.0,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "Can a Household product title claim permanent germ elimination or hospital grade results?",
+          "expected_doc_ids": [
+            "household_title_policy",
+            "household_prohibited_claims_policy"
+          ],
+          "retrieved_doc_ids": [
+            "household_title_policy",
+            "household_attribute_schema",
+            "household_category_policy",
+            "household_mismatch_cases"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 0.5,
+            "hit@3": 1.0,
+            "ndcg@3": 0.6131471927654584,
+            "recall@5": 0.5,
+            "hit@5": 1.0,
+            "ndcg@5": 0.6131471927654584
+          }
+        },
+        {
+          "question": "What evidence covers Household mismatch cases such as appliance parts listed as appliances?",
+          "expected_doc_ids": [
+            "household_mismatch_cases",
+            "household_category_policy"
+          ],
+          "retrieved_doc_ids": [
+            "household_mismatch_cases",
+            "household_category_policy",
+            "household_title_policy",
+            "household_attribute_schema"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "What category policy applies when a textbook is listed under Electronics?",
+          "expected_doc_ids": [
+            "books_category_policy",
+            "books_mismatch_cases"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_category_policy",
+            "electronics_mismatch_cases"
+          ],
+          "metrics": {
+            "mrr": 0.0,
+            "recall@1": 0.0,
+            "hit@1": 0.0,
+            "ndcg@1": 0.0,
+            "recall@3": 0.0,
+            "hit@3": 0.0,
+            "ndcg@3": 0.0,
+            "recall@5": 0.0,
+            "hit@5": 0.0,
+            "ndcg@5": 0.0
+          }
+        },
+        {
+          "question": "Which required attributes should Books listings include for ISBN, author, format, or edition?",
+          "expected_doc_ids": [
+            "books_attribute_schema"
+          ],
+          "retrieved_doc_ids": [
+            "books_title_policy",
+            "books_attribute_schema",
+            "books_prohibited_claims_policy"
+          ],
+          "metrics": {
+            "mrr": 0.5,
+            "recall@1": 0.0,
+            "hit@1": 0.0,
+            "ndcg@1": 0.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 0.6309297535714575,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 0.6309297535714575
+          }
+        },
+        {
+          "question": "Can a Books title claim guaranteed exam pass or unauthorized official answer key?",
+          "expected_doc_ids": [
+            "books_title_policy",
+            "books_prohibited_claims_policy"
+          ],
+          "retrieved_doc_ids": [
+            "books_title_policy",
+            "books_prohibited_claims_policy",
+            "books_attribute_schema",
+            "books_mismatch_cases"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "What evidence covers Books mismatch cases such as ebook access codes listed as printed books?",
+          "expected_doc_ids": [
+            "books_mismatch_cases",
+            "books_category_policy"
+          ],
+          "retrieved_doc_ids": [
+            "books_mismatch_cases",
+            "books_prohibited_claims_policy",
+            "books_title_policy",
+            "books_attribute_schema",
+            "books_category_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 0.5,
+            "hit@3": 1.0,
+            "ndcg@3": 0.6131471927654584,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 0.8503449055347546
+          }
+        }
+      ],
+      "variant": "local_lexical",
+      "status": "ok",
+      "settings": {
+        "use_mock": true,
+        "milvus_collection": "catalogops_policy_chunks",
+        "embedding_provider": "minilm",
+        "embedding_model": "text-embedding-v3",
+        "embedding_model_path": "/notebook/workspace/CatalogOps-Agent/models/all-MiniLM-L6-v2",
+        "candidate_top_n": 12,
+        "reranker_mode": "lexical",
+        "rrf_k": 60
+      },
+      "ingestion": null
+    },
+    {
+      "total": 16,
+      "summary": {
+        "mrr": 0.84375,
+        "recall@1": 0.5,
+        "hit@1": 0.75,
+        "ndcg@1": 0.75,
+        "recall@3": 0.84375,
+        "hit@3": 0.9375,
+        "ndcg@3": 0.8035765086938984,
+        "recall@5": 0.875,
+        "hit@5": 0.9375,
+        "ndcg@5": 0.8200807663546853
+      },
+      "details": [
+        {
+          "question": "What category policy applies when a cotton dress is listed under Electronics?",
+          "expected_doc_ids": [
+            "clothing_category_policy",
+            "clothing_mismatch_cases"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_category_policy",
+            "clothing_category_policy",
+            "electronics_mismatch_cases",
+            "electronics_title_policy"
+          ],
+          "metrics": {
+            "mrr": 0.5,
+            "recall@1": 0.0,
+            "hit@1": 0.0,
+            "ndcg@1": 0.0,
+            "recall@3": 0.5,
+            "hit@3": 1.0,
+            "ndcg@3": 0.38685280723454163,
+            "recall@5": 0.5,
+            "hit@5": 1.0,
+            "ndcg@5": 0.38685280723454163
+          }
+        },
+        {
+          "question": "Which required attributes should be present for Clothing and Accessories apparel listings?",
+          "expected_doc_ids": [
+            "clothing_attribute_schema"
+          ],
+          "retrieved_doc_ids": [
+            "clothing_attribute_schema",
+            "electronics_attribute_schema",
+            "clothing_category_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 1.0,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "Can a clothing title use keyword stuffing such as dress shoes jacket pants in one listing?",
+          "expected_doc_ids": [
+            "clothing_title_policy",
+            "clothing_keyword_stuffing_policy"
+          ],
+          "retrieved_doc_ids": [
+            "clothing_keyword_stuffing_policy",
+            "clothing_title_policy",
+            "clothing_category_policy",
+            "clothing_attribute_schema",
+            "clothing_mismatch_cases"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "What policy evidence covers prohibited medical or slimming claims in clothing listings?",
+          "expected_doc_ids": [
+            "clothing_prohibited_claims_policy"
+          ],
+          "retrieved_doc_ids": [
+            "clothing_prohibited_claims_policy",
+            "clothing_category_policy",
+            "household_prohibited_claims_policy",
+            "clothing_title_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 1.0,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "What category policy applies when a smartphone charger is listed as a mobile phone?",
+          "expected_doc_ids": [
+            "electronics_category_policy",
+            "electronics_mismatch_cases"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_category_policy",
+            "electronics_mismatch_cases",
+            "clothing_category_policy",
+            "clothing_keyword_stuffing_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "Which required attributes should an Electronics smartphone or headset listing include?",
+          "expected_doc_ids": [
+            "electronics_attribute_schema"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_title_policy",
+            "electronics_attribute_schema",
+            "clothing_attribute_schema",
+            "clothing_title_policy"
+          ],
+          "metrics": {
+            "mrr": 0.5,
+            "recall@1": 0.0,
+            "hit@1": 0.0,
+            "ndcg@1": 0.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 0.6309297535714575,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 0.6309297535714575
+          }
+        },
+        {
+          "question": "Can an Electronics product title claim 100 percent safe, best ever, or official Apple replacement?",
+          "expected_doc_ids": [
+            "electronics_title_policy",
+            "electronics_prohibited_claims_policy"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_prohibited_claims_policy",
+            "electronics_title_policy",
+            "electronics_category_policy",
+            "clothing_title_policy",
+            "household_prohibited_claims_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "What evidence identifies mismatch cases for electronics accessories versus actual devices?",
+          "expected_doc_ids": [
+            "electronics_mismatch_cases",
+            "electronics_category_policy"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_mismatch_cases",
+            "household_mismatch_cases",
+            "clothing_mismatch_cases",
+            "electronics_category_policy",
+            "electronics_attribute_schema"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 0.5,
+            "hit@3": 1.0,
+            "ndcg@3": 0.6131471927654584,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 0.8772153153380493
+          }
+        },
+        {
+          "question": "What category policy applies when cookware or bedding is listed as Books?",
+          "expected_doc_ids": [
+            "household_category_policy",
+            "household_mismatch_cases"
+          ],
+          "retrieved_doc_ids": [
+            "books_category_policy",
+            "books_title_policy",
+            "books_prohibited_claims_policy",
+            "books_mismatch_cases",
+            "books_attribute_schema"
+          ],
+          "metrics": {
+            "mrr": 0.0,
+            "recall@1": 0.0,
+            "hit@1": 0.0,
+            "ndcg@1": 0.0,
+            "recall@3": 0.0,
+            "hit@3": 0.0,
+            "ndcg@3": 0.0,
+            "recall@5": 0.0,
+            "hit@5": 0.0,
+            "ndcg@5": 0.0
+          }
+        },
+        {
+          "question": "Which required attributes should Household kitchen appliance or bedding listings include?",
+          "expected_doc_ids": [
+            "household_attribute_schema"
+          ],
+          "retrieved_doc_ids": [
+            "household_attribute_schema",
+            "clothing_attribute_schema",
+            "electronics_attribute_schema",
+            "household_mismatch_cases"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 1.0,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "Can a Household product title claim permanent germ elimination or hospital grade results?",
+          "expected_doc_ids": [
+            "household_title_policy",
+            "household_prohibited_claims_policy"
+          ],
+          "retrieved_doc_ids": [
+            "household_title_policy",
+            "clothing_title_policy",
+            "household_prohibited_claims_policy",
+            "household_mismatch_cases"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 0.9197207891481876,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 0.9197207891481876
+          }
+        },
+        {
+          "question": "What evidence covers Household mismatch cases such as appliance parts listed as appliances?",
+          "expected_doc_ids": [
+            "household_mismatch_cases",
+            "household_category_policy"
+          ],
+          "retrieved_doc_ids": [
+            "household_mismatch_cases",
+            "household_category_policy",
+            "household_attribute_schema",
+            "household_title_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "What category policy applies when a textbook is listed under Electronics?",
+          "expected_doc_ids": [
+            "books_category_policy",
+            "books_mismatch_cases"
+          ],
+          "retrieved_doc_ids": [
+            "electronics_category_policy",
+            "books_mismatch_cases",
+            "electronics_title_policy",
+            "electronics_mismatch_cases"
+          ],
+          "metrics": {
+            "mrr": 0.5,
+            "recall@1": 0.0,
+            "hit@1": 0.0,
+            "ndcg@1": 0.0,
+            "recall@3": 0.5,
+            "hit@3": 1.0,
+            "ndcg@3": 0.38685280723454163,
+            "recall@5": 0.5,
+            "hit@5": 1.0,
+            "ndcg@5": 0.38685280723454163
+          }
+        },
+        {
+          "question": "Which required attributes should Books listings include for ISBN, author, format, or edition?",
+          "expected_doc_ids": [
+            "books_attribute_schema"
+          ],
+          "retrieved_doc_ids": [
+            "books_attribute_schema",
+            "books_title_policy",
+            "books_category_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 1.0,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "Can a Books title claim guaranteed exam pass or unauthorized official answer key?",
+          "expected_doc_ids": [
+            "books_title_policy",
+            "books_prohibited_claims_policy"
+          ],
+          "retrieved_doc_ids": [
+            "books_title_policy",
+            "books_prohibited_claims_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 1.0,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 1.0
+          }
+        },
+        {
+          "question": "What evidence covers Books mismatch cases such as ebook access codes listed as printed books?",
+          "expected_doc_ids": [
+            "books_mismatch_cases",
+            "books_category_policy"
+          ],
+          "retrieved_doc_ids": [
+            "books_mismatch_cases",
+            "books_prohibited_claims_policy",
+            "books_category_policy"
+          ],
+          "metrics": {
+            "mrr": 1.0,
+            "recall@1": 0.5,
+            "hit@1": 1.0,
+            "ndcg@1": 1.0,
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "ndcg@3": 0.9197207891481876,
+            "recall@5": 1.0,
+            "hit@5": 1.0,
+            "ndcg@5": 0.9197207891481876
+          }
+        }
+      ],
+      "variant": "local_semantic",
+      "status": "ok",
+      "settings": {
+        "use_mock": true,
+        "milvus_collection": "catalogops_policy_chunks",
+        "embedding_provider": "minilm",
+        "embedding_model": "text-embedding-v3",
+        "embedding_model_path": "/notebook/workspace/CatalogOps-Agent/models/all-MiniLM-L6-v2",
+        "candidate_top_n": 12,
+        "reranker_mode": "semantic",
+        "rrf_k": 60
+      },
+      "ingestion": null
+    }
+  ]
+}

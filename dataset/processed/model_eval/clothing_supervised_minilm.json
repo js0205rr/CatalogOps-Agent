@@ -1,0 +1,1310 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-28T09:56:04.849386+00:00",
+  "elapsed_seconds": 202.034,
+  "inputs": {
+    "clean_csv": "/notebook/workspace/CatalogOps-Agent/dataset/processed/clothing_catalogops_clean.csv",
+    "mismatch_csv": "/notebook/workspace/CatalogOps-Agent/dataset/processed/clothing_catalogops_mismatch_20pct.csv",
+    "labels_csv": "/notebook/workspace/CatalogOps-Agent/dataset/processed/clothing_labels.csv",
+    "model_path": "/notebook/workspace/CatalogOps-Agent/models/all-MiniLM-L6-v2"
+  },
+  "split": {
+    "random_state": 42,
+    "test_size": 0.2,
+    "train_rows": 4502,
+    "test_rows": 1126,
+    "mismatch_scope": "test"
+  },
+  "embedding": {
+    "model": "all-MiniLM-L6-v2",
+    "backend": "sentence_transformers",
+    "batch_size": 64,
+    "normalized": true
+  },
+  "category_test": {
+    "row_count": 1126,
+    "methods": {
+      "rule": {
+        "category_accuracy": 0.6474,
+        "macro_f1": 0.689,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories > Accessories",
+            "Clothing & Accessories > Apparel",
+            "Clothing & Accessories > Bags",
+            "Clothing & Accessories > Bottoms",
+            "Clothing & Accessories > Clothing Sets",
+            "Clothing & Accessories > Dresses",
+            "Clothing & Accessories > Innerwear",
+            "Clothing & Accessories > Shoes",
+            "Clothing & Accessories > Tops"
+          ],
+          "matrix": [
+            [
+              58,
+              113,
+              0,
+              0,
+              2,
+              0,
+              4,
+              1,
+              0
+            ],
+            [
+              0,
+              99,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              5,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              118,
+              0,
+              20,
+              0,
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              10,
+              0,
+              0,
+              93,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              27,
+              0,
+              0,
+              0,
+              111,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              29,
+              0,
+              0,
+              0,
+              0,
+              107,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              4,
+              42,
+              0
+            ],
+            [
+              0,
+              73,
+              0,
+              0,
+              0,
+              2,
+              1,
+              0,
+              193
+            ]
+          ]
+        }
+      },
+      "minilm_cosine": {
+        "category_accuracy": 0.5142,
+        "macro_f1": 0.4295,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories > Accessories",
+            "Clothing & Accessories > Apparel",
+            "Clothing & Accessories > Bags",
+            "Clothing & Accessories > Bottoms",
+            "Clothing & Accessories > Clothing Sets",
+            "Clothing & Accessories > Dresses",
+            "Clothing & Accessories > Innerwear",
+            "Clothing & Accessories > Shoes",
+            "Clothing & Accessories > Tops"
+          ],
+          "matrix": [
+            [
+              135,
+              0,
+              1,
+              2,
+              3,
+              16,
+              18,
+              0,
+              5
+            ],
+            [
+              25,
+              0,
+              1,
+              13,
+              1,
+              16,
+              27,
+              3,
+              13
+            ],
+            [
+              5,
+              0,
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              0,
+              0,
+              81,
+              4,
+              12,
+              20,
+              3,
+              16
+            ],
+            [
+              15,
+              0,
+              1,
+              10,
+              22,
+              26,
+              22,
+              2,
+              6
+            ],
+            [
+              9,
+              0,
+              0,
+              7,
+              5,
+              88,
+              19,
+              0,
+              10
+            ],
+            [
+              7,
+              0,
+              1,
+              10,
+              7,
+              3,
+              78,
+              25,
+              5
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              1,
+              8,
+              3,
+              21,
+              6
+            ],
+            [
+              28,
+              0,
+              2,
+              27,
+              10,
+              33,
+              18,
+              1,
+              150
+            ]
+          ]
+        }
+      },
+      "hybrid_margin_0_015": {
+        "category_accuracy": 0.5933,
+        "macro_f1": 0.554,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories > Accessories",
+            "Clothing & Accessories > Apparel",
+            "Clothing & Accessories > Bags",
+            "Clothing & Accessories > Bottoms",
+            "Clothing & Accessories > Clothing Sets",
+            "Clothing & Accessories > Dresses",
+            "Clothing & Accessories > Innerwear",
+            "Clothing & Accessories > Shoes",
+            "Clothing & Accessories > Tops"
+          ],
+          "matrix": [
+            [
+              127,
+              20,
+              0,
+              0,
+              3,
+              15,
+              11,
+              0,
+              3
+            ],
+            [
+              15,
+              32,
+              0,
+              8,
+              1,
+              15,
+              17,
+              2,
+              9
+            ],
+            [
+              5,
+              0,
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              28,
+              0,
+              70,
+              2,
+              9,
+              15,
+              3,
+              12
+            ],
+            [
+              9,
+              3,
+              1,
+              5,
+              52,
+              20,
+              10,
+              1,
+              3
+            ],
+            [
+              7,
+              5,
+              0,
+              3,
+              2,
+              101,
+              12,
+              0,
+              8
+            ],
+            [
+              5,
+              6,
+              1,
+              7,
+              4,
+              3,
+              89,
+              19,
+              2
+            ],
+            [
+              0,
+              1,
+              0,
+              7,
+              1,
+              7,
+              1,
+              27,
+              4
+            ],
+            [
+              20,
+              16,
+              1,
+              20,
+              5,
+              25,
+              15,
+              1,
+              166
+            ]
+          ]
+        }
+      },
+      "minilm_logreg": {
+        "category_accuracy": 0.7123,
+        "macro_f1": 0.6646,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories > Accessories",
+            "Clothing & Accessories > Apparel",
+            "Clothing & Accessories > Bags",
+            "Clothing & Accessories > Bottoms",
+            "Clothing & Accessories > Clothing Sets",
+            "Clothing & Accessories > Dresses",
+            "Clothing & Accessories > Innerwear",
+            "Clothing & Accessories > Shoes",
+            "Clothing & Accessories > Tops"
+          ],
+          "matrix": [
+            [
+              132,
+              20,
+              3,
+              1,
+              8,
+              3,
+              7,
+              0,
+              6
+            ],
+            [
+              10,
+              63,
+              2,
+              4,
+              1,
+              2,
+              12,
+              2,
+              3
+            ],
+            [
+              3,
+              0,
+              7,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              5,
+              0,
+              111,
+              4,
+              2,
+              2,
+              4,
+              9
+            ],
+            [
+              8,
+              5,
+              1,
+              7,
+              57,
+              12,
+              8,
+              1,
+              5
+            ],
+            [
+              4,
+              4,
+              0,
+              5,
+              15,
+              101,
+              5,
+              2,
+              2
+            ],
+            [
+              1,
+              8,
+              2,
+              3,
+              4,
+              2,
+              106,
+              9,
+              1
+            ],
+            [
+              0,
+              2,
+              0,
+              4,
+              1,
+              4,
+              4,
+              30,
+              3
+            ],
+            [
+              12,
+              17,
+              3,
+              10,
+              13,
+              4,
+              8,
+              7,
+              195
+            ]
+          ]
+        }
+      },
+      "minilm_linearsvm": {
+        "category_accuracy": 0.762,
+        "macro_f1": 0.6944,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories > Accessories",
+            "Clothing & Accessories > Apparel",
+            "Clothing & Accessories > Bags",
+            "Clothing & Accessories > Bottoms",
+            "Clothing & Accessories > Clothing Sets",
+            "Clothing & Accessories > Dresses",
+            "Clothing & Accessories > Innerwear",
+            "Clothing & Accessories > Shoes",
+            "Clothing & Accessories > Tops"
+          ],
+          "matrix": [
+            [
+              146,
+              13,
+              0,
+              1,
+              6,
+              3,
+              5,
+              1,
+              5
+            ],
+            [
+              5,
+              70,
+              1,
+              4,
+              2,
+              3,
+              9,
+              2,
+              3
+            ],
+            [
+              6,
+              0,
+              3,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              1,
+              115,
+              2,
+              2,
+              3,
+              2,
+              9
+            ],
+            [
+              9,
+              4,
+              0,
+              6,
+              58,
+              14,
+              5,
+              1,
+              7
+            ],
+            [
+              3,
+              3,
+              1,
+              6,
+              10,
+              108,
+              2,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              0,
+              1,
+              3,
+              2,
+              115,
+              4,
+              2
+            ],
+            [
+              0,
+              2,
+              0,
+              2,
+              2,
+              4,
+              3,
+              31,
+              4
+            ],
+            [
+              12,
+              13,
+              1,
+              10,
+              10,
+              2,
+              6,
+              3,
+              212
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "mismatch_detection": {
+    "scope": "test",
+    "row_count": 1126,
+    "methods": {
+      "rule": {
+        "category_accuracy": 0.6474,
+        "macro_f1": 0.689,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories > Accessories",
+            "Clothing & Accessories > Apparel",
+            "Clothing & Accessories > Bags",
+            "Clothing & Accessories > Bottoms",
+            "Clothing & Accessories > Clothing Sets",
+            "Clothing & Accessories > Dresses",
+            "Clothing & Accessories > Innerwear",
+            "Clothing & Accessories > Shoes",
+            "Clothing & Accessories > Tops"
+          ],
+          "matrix": [
+            [
+              58,
+              113,
+              0,
+              0,
+              2,
+              0,
+              4,
+              1,
+              0
+            ],
+            [
+              0,
+              99,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              5,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              118,
+              0,
+              20,
+              0,
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              10,
+              0,
+              0,
+              93,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              27,
+              0,
+              0,
+              0,
+              111,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              29,
+              0,
+              0,
+              0,
+              0,
+              107,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              4,
+              42,
+              0
+            ],
+            [
+              0,
+              73,
+              0,
+              0,
+              0,
+              2,
+              1,
+              0,
+              193
+            ]
+          ]
+        },
+        "mismatch_detection": {
+          "confusion": {
+            "tp": 207,
+            "fp": 313,
+            "fn": 22,
+            "tn": 584
+          },
+          "actual_mismatch_rate": 0.2034,
+          "predicted_mismatch_rate": 0.4618,
+          "precision": 0.3981,
+          "recall": 0.9039,
+          "f1": 0.5527
+        }
+      },
+      "minilm_cosine": {
+        "category_accuracy": 0.5142,
+        "macro_f1": 0.4295,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories > Accessories",
+            "Clothing & Accessories > Apparel",
+            "Clothing & Accessories > Bags",
+            "Clothing & Accessories > Bottoms",
+            "Clothing & Accessories > Clothing Sets",
+            "Clothing & Accessories > Dresses",
+            "Clothing & Accessories > Innerwear",
+            "Clothing & Accessories > Shoes",
+            "Clothing & Accessories > Tops"
+          ],
+          "matrix": [
+            [
+              135,
+              0,
+              1,
+              2,
+              3,
+              16,
+              18,
+              0,
+              5
+            ],
+            [
+              25,
+              0,
+              1,
+              13,
+              1,
+              16,
+              27,
+              3,
+              13
+            ],
+            [
+              5,
+              0,
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              0,
+              0,
+              81,
+              4,
+              12,
+              20,
+              3,
+              16
+            ],
+            [
+              15,
+              0,
+              1,
+              10,
+              22,
+              26,
+              22,
+              2,
+              6
+            ],
+            [
+              9,
+              0,
+              0,
+              7,
+              5,
+              88,
+              19,
+              0,
+              10
+            ],
+            [
+              7,
+              0,
+              1,
+              10,
+              7,
+              3,
+              78,
+              25,
+              5
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              1,
+              8,
+              3,
+              21,
+              6
+            ],
+            [
+              28,
+              0,
+              2,
+              27,
+              10,
+              33,
+              18,
+              1,
+              150
+            ]
+          ]
+        },
+        "mismatch_detection": {
+          "confusion": {
+            "tp": 210,
+            "fp": 439,
+            "fn": 19,
+            "tn": 458
+          },
+          "actual_mismatch_rate": 0.2034,
+          "predicted_mismatch_rate": 0.5764,
+          "precision": 0.3236,
+          "recall": 0.917,
+          "f1": 0.4784
+        }
+      },
+      "hybrid_margin_0_015": {
+        "category_accuracy": 0.5933,
+        "macro_f1": 0.554,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories > Accessories",
+            "Clothing & Accessories > Apparel",
+            "Clothing & Accessories > Bags",
+            "Clothing & Accessories > Bottoms",
+            "Clothing & Accessories > Clothing Sets",
+            "Clothing & Accessories > Dresses",
+            "Clothing & Accessories > Innerwear",
+            "Clothing & Accessories > Shoes",
+            "Clothing & Accessories > Tops"
+          ],
+          "matrix": [
+            [
+              127,
+              20,
+              0,
+              0,
+              3,
+              15,
+              11,
+              0,
+              3
+            ],
+            [
+              15,
+              32,
+              0,
+              8,
+              1,
+              15,
+              17,
+              2,
+              9
+            ],
+            [
+              5,
+              0,
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              28,
+              0,
+              70,
+              2,
+              9,
+              15,
+              3,
+              12
+            ],
+            [
+              9,
+              3,
+              1,
+              5,
+              52,
+              20,
+              10,
+              1,
+              3
+            ],
+            [
+              7,
+              5,
+              0,
+              3,
+              2,
+              101,
+              12,
+              0,
+              8
+            ],
+            [
+              5,
+              6,
+              1,
+              7,
+              4,
+              3,
+              89,
+              19,
+              2
+            ],
+            [
+              0,
+              1,
+              0,
+              7,
+              1,
+              7,
+              1,
+              27,
+              4
+            ],
+            [
+              20,
+              16,
+              1,
+              20,
+              5,
+              25,
+              15,
+              1,
+              166
+            ]
+          ]
+        },
+        "mismatch_detection": {
+          "confusion": {
+            "tp": 210,
+            "fp": 368,
+            "fn": 19,
+            "tn": 529
+          },
+          "actual_mismatch_rate": 0.2034,
+          "predicted_mismatch_rate": 0.5133,
+          "precision": 0.3633,
+          "recall": 0.917,
+          "f1": 0.5204
+        }
+      },
+      "minilm_logreg": {
+        "category_accuracy": 0.7123,
+        "macro_f1": 0.6646,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories > Accessories",
+            "Clothing & Accessories > Apparel",
+            "Clothing & Accessories > Bags",
+            "Clothing & Accessories > Bottoms",
+            "Clothing & Accessories > Clothing Sets",
+            "Clothing & Accessories > Dresses",
+            "Clothing & Accessories > Innerwear",
+            "Clothing & Accessories > Shoes",
+            "Clothing & Accessories > Tops"
+          ],
+          "matrix": [
+            [
+              132,
+              20,
+              3,
+              1,
+              8,
+              3,
+              7,
+              0,
+              6
+            ],
+            [
+              10,
+              63,
+              2,
+              4,
+              1,
+              2,
+              12,
+              2,
+              3
+            ],
+            [
+              3,
+              0,
+              7,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              5,
+              0,
+              111,
+              4,
+              2,
+              2,
+              4,
+              9
+            ],
+            [
+              8,
+              5,
+              1,
+              7,
+              57,
+              12,
+              8,
+              1,
+              5
+            ],
+            [
+              4,
+              4,
+              0,
+              5,
+              15,
+              101,
+              5,
+              2,
+              2
+            ],
+            [
+              1,
+              8,
+              2,
+              3,
+              4,
+              2,
+              106,
+              9,
+              1
+            ],
+            [
+              0,
+              2,
+              0,
+              4,
+              1,
+              4,
+              4,
+              30,
+              3
+            ],
+            [
+              12,
+              17,
+              3,
+              10,
+              13,
+              4,
+              8,
+              7,
+              195
+            ]
+          ]
+        },
+        "mismatch_detection": {
+          "confusion": {
+            "tp": 216,
+            "fp": 264,
+            "fn": 13,
+            "tn": 633
+          },
+          "actual_mismatch_rate": 0.2034,
+          "predicted_mismatch_rate": 0.4263,
+          "precision": 0.45,
+          "recall": 0.9432,
+          "f1": 0.6093
+        }
+      },
+      "minilm_linearsvm": {
+        "category_accuracy": 0.762,
+        "macro_f1": 0.6944,
+        "confusion_matrix": {
+          "labels": [
+            "Clothing & Accessories > Accessories",
+            "Clothing & Accessories > Apparel",
+            "Clothing & Accessories > Bags",
+            "Clothing & Accessories > Bottoms",
+            "Clothing & Accessories > Clothing Sets",
+            "Clothing & Accessories > Dresses",
+            "Clothing & Accessories > Innerwear",
+            "Clothing & Accessories > Shoes",
+            "Clothing & Accessories > Tops"
+          ],
+          "matrix": [
+            [
+              146,
+              13,
+              0,
+              1,
+              6,
+              3,
+              5,
+              1,
+              5
+            ],
+            [
+              5,
+              70,
+              1,
+              4,
+              2,
+              3,
+              9,
+              2,
+              3
+            ],
+            [
+              6,
+              0,
+              3,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              1,
+              115,
+              2,
+              2,
+              3,
+              2,
+              9
+            ],
+            [
+              9,
+              4,
+              0,
+              6,
+              58,
+              14,
+              5,
+              1,
+              7
+            ],
+            [
+              3,
+              3,
+              1,
+              6,
+              10,
+              108,
+              2,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              0,
+              1,
+              3,
+              2,
+              115,
+              4,
+              2
+            ],
+            [
+              0,
+              2,
+              0,
+              2,
+              2,
+              4,
+              3,
+              31,
+              4
+            ],
+            [
+              12,
+              13,
+              1,
+              10,
+              10,
+              2,
+              6,
+              3,
+              212
+            ]
+          ]
+        },
+        "mismatch_detection": {
+          "confusion": {
+            "tp": 221,
+            "fp": 215,
+            "fn": 8,
+            "tn": 682
+          },
+          "actual_mismatch_rate": 0.2034,
+          "predicted_mismatch_rate": 0.3872,
+          "precision": 0.5069,
+          "recall": 0.9651,
+          "f1": 0.6647
+        }
+      }
+    }
+  },
+  "artifacts": {
+    "logistic_regression": "/notebook/workspace/CatalogOps-Agent/models/clothing_minilm_logreg.joblib",
+    "linear_svm": "/notebook/workspace/CatalogOps-Agent/models/clothing_minilm_linearsvm.joblib"
+  },
+  "diagnostics": {
+    "class_distribution": {
+      "Clothing & Accessories > Clothing Sets": 521,
+      "Clothing & Accessories > Accessories": 902,
+      "Clothing & Accessories > Dresses": 692,
+      "Clothing & Accessories > Tops": 1343,
+      "Clothing & Accessories > Bottoms": 703,
+      "Clothing & Accessories > Shoes": 238,
+      "Clothing & Accessories > Apparel": 495,
+      "Clothing & Accessories > Innerwear": 681,
+      "Clothing & Accessories > Bags": 53
+    },
+    "mismatch_distribution": {
+      "Clothing & Accessories > Tops": 227,
+      "Clothing & Accessories > Accessories": 175,
+      "Clothing & Accessories > Innerwear": 142,
+      "Clothing & Accessories > Bottoms": 125,
+      "Clothing & Accessories > Apparel": 122,
+      "Clothing & Accessories > Dresses": 120,
+      "Clothing & Accessories > Clothing Sets": 86,
+      "Clothing & Accessories > Bags": 71,
+      "Clothing & Accessories > Shoes": 58
+    },
+    "cosine_margin_avg": 0.0629,
+    "cosine_margin_p50": 0.0476
+  }
+}
