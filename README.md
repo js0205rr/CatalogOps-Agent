@@ -45,28 +45,6 @@ See `docs/EVALUATION.md` for 400-row, 5,000-row, and full-dataset comparisons.
 - `tests`: smoke and workflow tests.
 - `docs`: specification, architecture, and demo script.
 
-## Quick Start
-
-```bash
-cd C:\Users\ruan\ASoftWare\CatalogOps-Agent
-python -m pip install -e ".[dev]"
-pytest
-uvicorn apps.api.main:app --reload
-```
-
-Frontend:
-
-```bash
-cd C:\Users\ruan\ASoftWare\CatalogOps-Agent\apps\web
-npm install
-npm run dev
-```
-
-End-to-end API smoke:
-
-```bash
-uvicorn apps.api.main:app --reload
-python scripts/smoke_api_e2e.py --base-url http://127.0.0.1:8000
 ```
 
 ## API
